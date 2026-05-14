@@ -1,0 +1,40 @@
+name: CodeBilArabi Engine
+on:
+  schedule:
+    # النشر مرتين يومياً: الساعة 4 عصراً والساعة 9 مساءً بتوقيت مصر (UTC+3)
+    - cron: '0 13,18 * * *' 
+  workflow_dispatch: # للتشغيل اليدوي في أي وقت للتجربة
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # ضروري جداً لتحديث ملف الـ JSON
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Execute CodeBilArabi Logic
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python main.py
+
+      - name: Save Memory (Update database.json)
+        run: |
+          git config --global user.name 'Mohamed-Ashraf-Bot'
+          git config --global user.email 'bot@codebilarabi.ai'
+          git add database.json
+          git commit -m "Update memory log [skip ci]" || echo "No changes to commit"
+          git push
+
