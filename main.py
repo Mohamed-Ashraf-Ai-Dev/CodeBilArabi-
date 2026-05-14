@@ -9,30 +9,30 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
 def get_ai_content(history):
-    # ميزة الـ Slicing: إرسال آخر 50 عنوان فقط لتوفير المساحة ومنع الأخطاء مستقبلاً
+    # ميزة الـ Slicing: إرسال آخر 50 عنوان فقط
     recent_history = history[-50:]
     
-    # البرومبت المطور لضمان محتوى احترافي وغير بديهي
+    # برومبت صارم لمنع النهايات والمقدمات
     prompt = f"""
     أنت الآن "كبير مهندسي البرمجيات" لمبادرة CodeBilArabi.
     هدفك: تقديم زتونة تقنية عميقة ومختصرة جداً.
     المواضيع السابقة لتجنب التكرار: {recent_history}
 
     اختر عشوائياً واحداً من القوالب التالية:
-    1. [نصيحة من الكواليس]: سر برمجى في Clean Code أو System Architecture لا يعرفه المبتدئون.
-    2. [زتونة اللغات]: معلومة عميقة (Deep Dive) في لغة برمجة (مثل الـ Memory Management أو Event Loop).
-    3. [لغز الكود]: كود صغير بمنطق خفي مع سؤال "ما النتيجة؟" وشرح الحل بأسلوب رتمي.
-    4. [مقارنة العمالقة]: فرق جوهري بين تقنيتين يختلطان على الناس (مثل JWT vs Sessions) في 4 جمل رنانة.
-    5. [أدوات المحترفين]: أداة CLI أو مكتبة GitHub تغير حياة المطور.
-    6. [فلسفة المنطق]: ربط مفهوم منطقي فلسفي بطريقة عمل الحاسوب.
+    1. [نصيحة من الكواليس]: سر برمجى احترافي.
+    2. [زتونة اللغات]: معلومة عميقة (Deep Dive) في لغة برمجة.
+    3. [لغز الكود]: كود صغير بمنطق خفي مع سؤال "ما النتيجة؟".
+    4. [مقارنة العمالقة]: فرق جوهري بين تقنيتين.
+    5. [أدوات المحترفين]: أداة CLI أو مكتبة GitHub قوية.
+    6. [فلسفة المنطق]: ربط مفهوم منطقي بطريقة عمل الحاسوب.
 
-    الشروط:
+    الشروط الصارمة:
     - ابدأ بـ [نوع البوست] ثم العنوان مباشرة.
-    - ممنوع تماماً أي مقدمات (مثل حسناً أو إليك).
+    - ممنوع تماماً أي مقدمات أو نهايات أو جمل تفاعلية.
+    - البوست ينتهي بانتهاء المعلومة التقنية فقط.
     - اللغة: عربية تقنية قوية بإيقاع "الزتونة" (جمل قصيرة وموزونة).
     """
 
-    # المحاولة الأولى: OpenRouter (Gemini 2.0 Flash المجاني)
     try:
         response = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
@@ -45,8 +45,7 @@ def get_ai_content(history):
         )
         return response.json()['choices'][0]['message']['content'].strip()
     except Exception as e:
-        print(f"OpenRouter fallback triggered due to: {e}")
-        # المحاولة الثانية (البديل): Groq (Llama 3.3) لضمان العمل للأبد
+        print(f"Fallback triggered: {e}")
         response = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
             headers={"Authorization": f"Bearer {GROQ_API_KEY}"},
@@ -59,22 +58,25 @@ def get_ai_content(history):
         return response.json()['choices'][0]['message']['content'].strip()
 
 def run_mission():
-    # فتح قاعدة البيانات البسيطة
     with open("database.json", "r", encoding="utf-8") as f:
         db = json.load(f)
     
-    # توليد المحتوى
-    post_content = get_ai_content(db["history"])
+    raw_content = get_ai_content(db["history"])
     
-    # النشر على تليجرام
+    # العلامة المائية الاحترافية التي طلبتها
+    watermark = "\n\n─── ⋆⋅☆⋅⋆ ───\n🔹 **CodeBilArabi** | كود بالعربي 💻"
+    final_post = raw_content + watermark
+    
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    requests.post(url, data={"chat_id": CHAT_ID, "text": post_content})
+    requests.post(url, data={
+        "chat_id": CHAT_ID, 
+        "text": final_post,
+        "parse_mode": "Markdown"
+    })
     
-    # تحديث التاريخ بالعنوان فقط (أول سطر) لتوفير المساحة
-    title = post_content.split('\n')[0]
+    title = raw_content.split('\n')[0]
     db["history"].append(title)
     
-    # حفظ التحديث في الملف
     with open("database.json", "w", encoding="utf-8") as f:
         json.dump(db, f, ensure_ascii=False, indent=2)
 
