@@ -1,18 +1,21 @@
-name: CodeBilArabi Engine
+name: CodeBilArabi Engine 
+
 on:
   schedule:
-    # النشر مرتين يومياً: الساعة 4 عصراً والساعة 9 مساءً بتوقيت مصر (UTC+3)
+    # النشر مرتين يومياً بتوقيت مصر (4 عصراً و 9 مساءً)
     - cron: '0 13,18 * * *' 
-  workflow_dispatch: # للتشغيل اليدوي في أي وقت للتجربة
+  workflow_dispatch: # للتشغيل اليدوي للتجربة
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # ضروري جداً لتحديث ملف الـ JSON
+      contents: write # ضروري لتعديل ملف الـ JSON
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # لجلب كل تاريخ الـ git لضمان نجاح الـ rebase
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -34,7 +37,15 @@ jobs:
         run: |
           git config --global user.name 'Mohamed-Ashraf-Bot'
           git config --global user.email 'bot@codebilarabi.ai'
+          
+          # إضافة ملف الذاكرة فقط
           git add database.json
-          git commit -m "Update memory log [skip ci]" || echo "No changes to commit"
-          git push
-
+          
+          # عمل Commit لو فيه تغييرات
+          if git commit -m "Update memory log [skip ci]"; then
+            # سحب التغييرات الجديدة بـ Rebase لتفادي الـ Rejected Error
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No changes to commit (Database is already up to date)."
+          fi
