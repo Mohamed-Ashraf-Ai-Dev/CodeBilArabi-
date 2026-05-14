@@ -6,6 +6,7 @@
     "[Category] Advanced Cryptography",
     "[Category] Network Protocol Engineering",
     "[Category] Advanced Operating Systems - **Kernel Internals & Memory Mapping**",
-    "[System Design] - **معمارية الأنظمة المرنة**"
+    "[System Design] - **معمارية الأنظمة المرنة**",
+    "**تحليل الضعف Cryptographic في بروتوكول Key Exchange اللاسلكي**"
   ]
 }
