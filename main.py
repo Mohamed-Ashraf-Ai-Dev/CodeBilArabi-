@@ -3,7 +3,7 @@ import json
 import requests
 import random
 
-# استدعاء المفاتيح
+# المفاتيح من الـ Secrets
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -11,61 +11,56 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 def get_ai_content(history):
     recent_history = history[-50:]
-    categories = [
-        "Kernel Internals & Memory Mapping",
-        "High-Concurrency & Locking Strategies",
-        "Distributed Systems Consensus (Raft/Paxos)",
-        "Compiler Optimization Techniques",
-        "Network Protocol Engineering (TCP/QUIC)",
-        "Advanced Cryptographic Implementation"
-    ]
-    selected_topic = random.choice(categories)
     
+    # المحاور التقنية اللي اتفقنا عليها
+    categories = [
+        {"name": "System Design", "desc": "Advanced architectural patterns (Scalability, Fault Tolerance)."},
+        {"name": "Deep Dive", "desc": "Low-level internals (Compilers, OS Kernels, Memory Management)."},
+        {"name": "Logic Bug Challenge", "desc": "Tricky code snippet with a subtle logic flaw for seniors to solve."},
+        {"name": "Complete The Code", "desc": "Complex function with a missing core logic part (Async, Crypto, etc.)."},
+        {"name": "Network Internals", "desc": "High-performance networking (QUIC, TCP tuning, eBPF)."}
+    ]
+    
+    selected = random.choice(categories)
+    
+    # برومبت إنجليزي لضمان أعلى جودة تفكير، مع أمر صريح بالمخرجات العربية
     prompt = f"""
-    You are a Hardcore Systems Engineer. Write a technical post for CodeBilArabi.
-    Topic: {selected_topic}
-    History: {recent_history}
+    Act as an Elite Software Architect. Write a technical post for 'CodeBilArabi'.
+    Category: {selected['name']} ({selected['desc']})
+    Avoid: {recent_history}
 
     STRICT RULES:
-    1. Language: Arabic (Technical terms MUST remain in English).
-    2. Format:
-       [Category]
-       **Bold Technical Title**
-       - Use bullet points for raw engineering facts.
-       - Focus on "How it works under the hood".
-    3. If Category is a Challenge: Provide a complex code snippet with a subtle logic flaw.
-    4. NO fluff. NO greetings. NO translation errors.
+    1. Language: Technical Arabic (Sentences in Arabic, core terms in English).
+    2. No "Zatona" or "Ahlan". Start directly with the content.
+    3. Format:
+       Line 1: [{selected['name']}]
+       Line 2: **Bold Technical Title**
+       Line 3-6: 3 to 4 dense bullet points (Logic-focused, not general info).
+    4. If Challenge: Include the code snippet and ask for the solution in comments.
+    5. NO fluff. NO translation errors. NO non-English/non-Arabic characters.
     """
 
-    # استخدام نسخة Gemma 2 المجانية لضمان العمل بدون رصيد
-    headers = {"Authorization": f"Bearer {OPENROUTER_API_KEY}"}
+    # استخدام Llama 3.3 70B عبر Groq لضمان الجودة واللغة
+    headers = {"Authorization": f"Bearer {GROQ_API_KEY}"}
     payload = {
-        "model": "google/gemma-2-9b-it:free", 
+        "model": "llama-3.3-70b-versatile",
         "messages": [
-            {"role": "system", "content": "You are a specialized software architect. You speak only in technical facts and code."},
+            {"role": "system", "content": "You are a Senior Engineer who hates filler words. You provide raw, high-level engineering facts."},
             {"role": "user", "content": prompt}
         ],
-        "temperature": 0.9
+        "temperature": 0.7
     }
 
     try:
-        response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=payload, timeout=30)
-        response.raise_for_status() # التأكد إن الطلب نجح
+        response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=payload, timeout=30)
+        response.raise_for_status()
         return response.json()['choices'][0]['message']['content'].strip()
     except Exception as e:
-        print(f"Primary Model failed: {e}")
-        # البديل: Llama 3 عبر Groq (سريع وموثوق جداً)
-        try:
-            headers_groq = {"Authorization": f"Bearer {GROQ_API_KEY}"}
-            res = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers_groq, 
-                                json={"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}]}, timeout=30)
-            return res.json()['choices'][0]['message']['content'].strip()
-        except Exception as e2:
-            print(f"Fallback Model also failed: {e2}")
-            return None
+        print(f"Error generating content: {e}")
+        return None
 
 def run_mission():
-    # التأكد من وجود ملف القاعدة لتجنب الـ Crash
+    # التأكد من وجود ملف القاعدة
     if not os.path.exists("database.json"):
         with open("database.json", "w") as f:
             json.dump({"history": []}, f)
@@ -76,29 +71,28 @@ def run_mission():
     content = get_ai_content(db["history"])
     
     if content:
+        # التوقيع (English Only)
         watermark = "\n\n━━━━━━━━━━━━━━\n🚀 **CodeBilArabi**"
-        final_text = content + watermark
+        final_post = content + watermark
         
-        # محاولة الإرسال لتليجرام مع طباعة الرد لمعرفة السبب لو فشل
+        # إرسال لتليجرام
         url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-        tg_res = requests.post(url, data={
+        res = requests.post(url, data={
             "chat_id": CHAT_ID, 
-            "text": final_text, 
+            "text": final_post, 
             "parse_mode": "Markdown"
         })
         
-        if tg_res.status_code != 200:
-            print(f"Telegram Error: {tg_res.text}")
-            # لو فشل بسبب الـ Markdown نجرب نبعت نص سادة
-            requests.post(url, data={"chat_id": CHAT_ID, "text": final_text})
-        
-        # حفظ التاريخ (فقط لو تم توليد محتوى)
-        lines = content.split('\n')
-        db["history"].append(" - ".join([line.strip() for line in lines[:2] if line.strip()]))
-        with open("database.json", "w", encoding="utf-8") as f:
-            json.dump(db, f, ensure_ascii=False, indent=2)
+        if res.status_code == 200:
+            # حفظ أول سطرين لضمان عدم التكرار
+            lines = content.split('\n')
+            db["history"].append(" - ".join([line.strip() for line in lines[:2] if line.strip()]))
+            with open("database.json", "w", encoding="utf-8") as f:
+                json.dump(db, f, ensure_ascii=False, indent=2)
+        else:
+            print(f"Telegram Error: {res.text}")
     else:
-        print("Mission failed: No content generated.")
+        print("Failed to get content from AI.")
 
 if __name__ == "__main__":
     run_mission()
