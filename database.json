@@ -1,12 +1,3 @@
 {
-  "history": [
-    "[زتونة اللغات]",
-    "[Deep Dive] - **معمارية Garbage Collection في اللغات البرمجية**",
-    "[Logic Bug Challenge] - **تحدي خطأ تسلسلي في تطبيق Multithreading**",
-    "[Category] Advanced Cryptography",
-    "[Category] Network Protocol Engineering",
-    "[Category] Advanced Operating Systems - **Kernel Internals & Memory Mapping**",
-    "[System Design] - **معمارية الأنظمة المرنة**",
-    "**تحليل الضعف Cryptographic في بروتوكول Key Exchange اللاسلكي**"
-  ]
+  "history": []
 }
