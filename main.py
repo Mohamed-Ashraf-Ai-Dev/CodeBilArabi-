@@ -9,28 +9,30 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
 def get_ai_content(history):
-    # ميزة الـ Slicing: إرسال آخر 50 عنوان فقط
     recent_history = history[-50:]
     
-    # برومبت صارم لمنع النهايات والمقدمات
     prompt = f"""
-    أنت الآن "كبير مهندسي البرمجيات" لمبادرة CodeBilArabi.
-    هدفك: تقديم زتونة تقنية عميقة ومختصرة جداً.
-    المواضيع السابقة لتجنب التكرار: {recent_history}
+    أنت الآن "Senior Software Engineer" والمحرر التقني لمبادرة CodeBilArabi.
+    هدفك: تقديم محتوى تقني "ثقيل" وعميق للمحترفين فقط.
+    المواضيع السابقة (تجنب التكرار): {recent_history}
 
-    اختر عشوائياً واحداً من القوالب التالية:
-    1. [نصيحة من الكواليس]: سر برمجى احترافي.
-    2. [زتونة اللغات]: معلومة عميقة (Deep Dive) في لغة برمجة.
-    3. [لغز الكود]: كود صغير بمنطق خفي مع سؤال "ما النتيجة؟".
-    4. [مقارنة العمالقة]: فرق جوهري بين تقنيتين.
-    5. [أدوات المحترفين]: أداة CLI أو مكتبة GitHub قوية.
-    6. [فلسفة المنطق]: ربط مفهوم منطقي بطريقة عمل الحاسوب.
+    اختر واحداً من هذه المسارات التقنية عشوائياً:
+    1. [System Design]: شرح نمط معماري متقدم أو حل لمشكلة Scalability.
+    2. [Deep Dive]: الغوص في كواليس عمل اللغات (مثل Garbage Collection, JIT, Concurrency).
+    3. [Logic Bug Challenge]: اكتب قطعة كود (Snippet) تحتوي على خطأ منطقي (Logic Bug) "صعب جداً" وغير ظاهر للعين المجردة، واطلب من المتابعين اكتشافه في التعليقات.
+    4. [Complete The Code]: اكتب قطعة كود متقدمة ناقصة جزءاً جوهرياً (مثل Function معينة أو Regex معقد) واطلب من المتابعين تكملة الكود في التعليقات.
+    5. [DevOps & Tools]: أداة CLI متطورة أو تقنية Automation ترفع الإنتاجية.
+    6. [Security & Logic]: ثغرة برمجية منطقية أو مفهوم تشفير متقدم.
 
-    الشروط الصارمة:
-    - ابدأ بـ [نوع البوست] ثم العنوان مباشرة.
-    - ممنوع تماماً أي مقدمات أو نهايات أو جمل تفاعلية.
-    - البوست ينتهي بانتهاء المعلومة التقنية فقط.
-    - اللغة: عربية تقنية قوية بإيقاع "الزتونة" (جمل قصيرة وموزونة).
+    القواعد الصارمة:
+    - اللغة: عربية تقنية رصينة (المصطلحات التقنية تظل بالإنجليزية).
+    - الهيكل:
+        السطر الأول: [اسم المسار]
+        السطر الثاني: **العنوان التقني**
+        التفاصيل: شرح مركز أو قطعة الكود المطلوبة.
+    - التحديات (Challenge) يجب أن تكون صعبة جداً وتستهدف ذكاء المبرمجين.
+    - ممنوع تماماً أي مقدمات، نهايات، أو كلمات "هابطة".
+    - المحتوى موجه لمن لديهم خبرة سنوات.
     """
 
     try:
@@ -39,13 +41,13 @@ def get_ai_content(history):
             headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}"},
             json={
                 "model": "google/gemini-2.0-flash-exp:free",
-                "messages": [{"role": "user", "content": prompt}]
+                "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0.8 # لزيادة الإبداع في التحديات والأخطاء
             },
             timeout=30
         )
         return response.json()['choices'][0]['message']['content'].strip()
-    except Exception as e:
-        print(f"Fallback triggered: {e}")
+    except:
         response = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
             headers={"Authorization": f"Bearer {GROQ_API_KEY}"},
@@ -63,8 +65,8 @@ def run_mission():
     
     raw_content = get_ai_content(db["history"])
     
-    # العلامة المائية الاحترافية التي طلبتها
-    watermark = "\n\n─── ⋆⋅☆⋅⋆ ───\n🔹 **CodeBilArabi** | كود بالعربي 💻"
+    # التوقيع الرسمي
+    watermark = "\n\n━━━━━━━━━━━━━━\n🚀 **CodeBilArabi**"
     final_post = raw_content + watermark
     
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
@@ -74,8 +76,10 @@ def run_mission():
         "parse_mode": "Markdown"
     })
     
-    title = raw_content.split('\n')[0]
-    db["history"].append(title)
+    # حفظ المسار والعنوان لضمان عدم التكرار
+    lines = raw_content.split('\n')
+    full_title = " - ".join([line.strip() for line in lines[:2] if line.strip()])
+    db["history"].append(full_title)
     
     with open("database.json", "w", encoding="utf-8") as f:
         json.dump(db, f, ensure_ascii=False, indent=2)
