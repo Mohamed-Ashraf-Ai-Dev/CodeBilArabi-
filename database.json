@@ -1,6 +1,7 @@
 {
   "history": [
     "**تحسين أداء الأنظمة الموزعة باستخدام نمطية Event-Driven Architecture وMicroservices**",
-    "**خلق ثغرة أمنية متقدمة باستخدام تقنية Side-Channel Attacks و Cache Poisoning**"
+    "**خلق ثغرة أمنية متقدمة باستخدام تقنية Side-Channel Attacks و Cache Poisoning**",
+    "**تحليل الثغرات الأمنية في الأنظمة الموزعة باستخدام تقنية Fault Injection و Defensive Programming**"
   ]
 }
