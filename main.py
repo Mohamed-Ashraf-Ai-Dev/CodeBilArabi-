@@ -2,58 +2,104 @@ import os
 import json
 import requests
 import random
-import time
+import hashlib
+from datetime import datetime
 
-# ==============================
-# ENV VARIABLES
-# ==============================
+# =========================================
+# ENV
+# =========================================
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
-# ==============================
-# CONFIG
-# ==============================
+# =========================================
+# FILES
+# =========================================
 
 DATABASE_FILE = "database.json"
 
-CATEGORIES = [
+# =========================================
+# CONTENT MODES
+# =========================================
+
+CONTENT_MODES = [
     {
-        "name": "System Architecture",
-        "goal": "Explore complex distributed patterns and scalability trade-offs."
+        "name": "War Story",
+        "style": "Write like a senior engineer describing a real production incident.",
+        "format": "Narrative technical breakdown."
     },
     {
-        "name": "Low-Level Internals",
-        "goal": "Deep dive into OS kernels, memory management, or hardware-software interaction."
+        "name": "Architecture Breakdown",
+        "style": "Deep engineering analysis of infrastructure or system design.",
+        "format": "Concise architecture analysis."
     },
     {
-        "name": "The Elite Arena (Hard Challenge)",
-        "goal": "Create a difficult engineering puzzle with subtle logic flaws or performance traps."
+        "name": "Performance Crime",
+        "style": "Analyze terrible performance decisions and why they fail.",
+        "format": "Aggressive technical critique."
     },
     {
-        "name": "Security Research",
-        "goal": "Analyze realistic software security flaws and defensive engineering techniques."
-    },
-    {
-        "name": "Performance Forensics",
-        "goal": "Investigate high-performance bottlenecks and latency anomalies."
+        "name": "Myth Busting",
+        "style": "Destroy a common engineering misconception.",
+        "format": "Contrarian engineering post."
     },
     {
         "name": "Distributed Systems Chaos",
-        "goal": "Analyze consensus failures and distributed edge cases."
+        "style": "Analyze distributed failure scenarios.",
+        "format": "Failure-oriented analysis."
+    },
+    {
+        "name": "Low-Level Internals",
+        "style": "Deep dive into kernels, memory, CPU, networking, schedulers.",
+        "format": "Hardcore systems internals."
+    },
+    {
+        "name": "Security Research",
+        "style": "Analyze realistic security architecture flaws and mitigations.",
+        "format": "Defensive security analysis."
+    },
+    {
+        "name": "Elite Arena",
+        "style": "Create a subtle engineering puzzle.",
+        "format": "Code challenge."
+    },
+    {
+        "name": "Code Review Roast",
+        "style": "Critique terrible engineering code professionally.",
+        "format": "Code review."
+    },
+    {
+        "name": "Failure Analysis",
+        "style": "Analyze why a production system collapsed.",
+        "format": "Postmortem style."
     }
 ]
 
-# ==============================
+# =========================================
+# BLACKLIST
+# =========================================
+
+TOPIC_BLACKLIST = [
+    "blockchain",
+    "crypto moon",
+    "web3",
+    "AI will replace programmers",
+    "generic microservices",
+]
+
+# =========================================
 # DATABASE
-# ==============================
+# =========================================
 
 def load_database():
     if not os.path.exists(DATABASE_FILE):
         with open(DATABASE_FILE, "w", encoding="utf-8") as f:
-            json.dump({"history": []}, f, ensure_ascii=False, indent=2)
+            json.dump({
+                "history": [],
+                "topic_hashes": []
+            }, f, ensure_ascii=False, indent=2)
 
     with open(DATABASE_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -63,64 +109,130 @@ def save_database(db):
     with open(DATABASE_FILE, "w", encoding="utf-8") as f:
         json.dump(db, f, ensure_ascii=False, indent=2)
 
+# =========================================
+# HELPERS
+# =========================================
 
-# ==============================
-# PROMPT BUILDER
-# ==============================
+def hash_text(text):
+    return hashlib.md5(text.encode()).hexdigest()
 
-def build_prompt(category, history):
-    return f"""
-You are a Principal Software Engineer and Systems Researcher.
 
-Category:
-{category['name']}
+def topic_exists(db, title):
+    h = hash_text(title.lower())
 
-Goal:
-{category['goal']}
+    return h in db["topic_hashes"]
 
-Recent Topics:
-{history[-20:]}
 
-STRICT RULES:
+def save_topic(db, title):
+    h = hash_text(title.lower())
 
-1. Technical accuracy is mandatory.
-2. Do NOT stack unrelated buzzwords.
-3. Avoid fake relationships between concepts.
-4. Prefer depth over hype.
-5. Use realistic engineering scenarios.
-6. If discussing security:
-   - Focus on architecture and defense.
-   - No offensive exploitation steps.
-7. Avoid generic motivational language.
-8. Use concise but dense technical writing.
-9. Use Arabic + English technical terminology naturally.
-10. Generate UNIQUE topics every time.
+    db["topic_hashes"].append(h)
 
-FORMAT:
+    db["topic_hashes"] = db["topic_hashes"][-200:]
 
-Line 1:
-[{category['name']}]
+# =========================================
+# STYLE RULES
+# =========================================
 
-Line 2:
-**Unique Technical Title**
+ANTI_AI_RULES = """
+STRICT ANTI-AI WRITING RULES:
 
-Remaining Lines:
-Technical content only.
+- Do NOT sound like an academic article.
+- Do NOT write generic educational explanations.
+- Avoid phrases like:
+  - يمكن استخدام
+  - تعتبر
+  - من الطرق
+  - من المهم
+  - في الأنظمة الحديثة
+  - تهدف إلى
+  - تعتمد على
 
-SPECIAL RULE:
-If category == "The Elite Arena (Hard Challenge)":
-- Include a short tricky code snippet.
-- Use C++, Rust, Go, or Python.
-- End with:
-"اكتب الحل في التعليقات"
+- Write like a real engineer posting on Telegram.
+- Use sharp technical observations.
+- Prefer concrete engineering details.
+- Avoid motivational tone.
+- Avoid textbook structure.
+- Avoid filler paragraphs.
 """
 
+# =========================================
+# PROMPT BUILDER
+# =========================================
 
-# ==============================
-# AI REQUEST
-# ==============================
+def build_prompt(mode, history):
+
+    blacklist = "\n".join(TOPIC_BLACKLIST)
+
+    return f"""
+You are a Principal Engineer writing technical Telegram posts.
+
+CONTENT MODE:
+{mode['name']}
+
+STYLE:
+{mode['style']}
+
+FORMAT:
+{mode['format']}
+
+RECENT TOPICS:
+{history[-30:]}
+
+BLACKLISTED TOPICS:
+{blacklist}
+
+{ANTI_AI_RULES}
+
+RULES:
+
+1. Technical accuracy is mandatory.
+2. Avoid hallucinations.
+3. Avoid buzzword stacking.
+4. Prefer niche engineering details.
+5. Use realistic infrastructure scenarios.
+6. Use Arabic naturally with English technical terms.
+7. Never write like ChatGPT.
+8. Avoid repetitive sentence structure.
+9. Avoid generic introductions.
+10. Keep it concise but insightful.
+11. Generate a UNIQUE topic.
+
+SPECIAL MODE RULES:
+
+IF mode == "Elite Arena":
+- Write a tricky code snippet.
+- Use Python, Rust, Go, or C++.
+- Bug must be subtle.
+- End with:
+"اكتب الحل في التعليقات"
+
+IF mode == "Code Review Roast":
+- Show terrible code.
+- Critique it brutally but technically.
+
+IF mode == "War Story":
+- Simulate a real production outage.
+- Include root cause.
+
+OUTPUT FORMAT:
+
+Line 1:
+[{mode['name']}]
+
+Line 2:
+Technical title only
+
+Remaining lines:
+Post content only
+"""
+
+# =========================================
+# AI REQUESTS
+# =========================================
 
 def ask_openrouter(prompt):
+
     response = requests.post(
         "https://openrouter.ai/api/v1/chat/completions",
         headers={
@@ -135,10 +247,10 @@ def ask_openrouter(prompt):
                     "content": prompt
                 }
             ],
-            "temperature": 0.45,
-            "max_tokens": 900
+            "temperature": 0.55,
+            "max_tokens": 1200
         },
-        timeout=45
+        timeout=60
     )
 
     response.raise_for_status()
@@ -149,6 +261,7 @@ def ask_openrouter(prompt):
 
 
 def ask_groq(prompt):
+
     response = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={
@@ -163,10 +276,10 @@ def ask_groq(prompt):
                     "content": prompt
                 }
             ],
-            "temperature": 0.4,
-            "max_tokens": 900
+            "temperature": 0.5,
+            "max_tokens": 1200
         },
-        timeout=45
+        timeout=60
     )
 
     response.raise_for_status()
@@ -175,27 +288,22 @@ def ask_groq(prompt):
 
     return data["choices"][0]["message"]["content"].strip()
 
-
-# ==============================
-# SELF VERIFICATION
-# ==============================
+# =========================================
+# VERIFICATION
+# =========================================
 
 def verify_content(content):
+
     verification_prompt = f"""
-Review the following technical post.
+Review this technical Telegram post.
 
 TASKS:
-1. Detect hallucinations.
-2. Detect buzzword stacking.
-3. Detect inaccurate cybersecurity claims.
-4. Detect fake relationships between technologies.
-5. Rewrite weak sections professionally.
-
-RULES:
-- Keep the same tone.
-- Keep it advanced.
-- Keep it concise.
-- Ensure technical correctness.
+- Remove AI-sounding phrases.
+- Remove buzzword stacking.
+- Fix weak engineering claims.
+- Improve realism.
+- Make the tone feel human.
+- Preserve technical depth.
 
 POST:
 {content}
@@ -204,16 +312,16 @@ POST:
     try:
         verified = ask_openrouter(verification_prompt)
         return verified
-    except Exception as e:
-        print("Verification failed:", e)
+
+    except Exception:
         return content
 
-
-# ==============================
+# =========================================
 # TELEGRAM
-# ==============================
+# =========================================
 
-def send_telegram_message(text):
+def send_telegram(text):
+
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
 
     payload = {
@@ -221,82 +329,97 @@ def send_telegram_message(text):
         "text": text
     }
 
-    response = requests.post(url, data=payload, timeout=30)
+    response = requests.post(
+        url,
+        data=payload,
+        timeout=30
+    )
 
     return response.status_code == 200
 
+# =========================================
+# GENERATION
+# =========================================
 
-# ==============================
-# MAIN GENERATION
-# ==============================
+def generate_post(db):
 
-def generate_post(history):
-    category = random.choice(CATEGORIES)
+    for _ in range(5):
 
-    prompt = build_prompt(category, history)
+        mode = random.choice(CONTENT_MODES)
 
-    try:
-        print("Using OpenRouter...")
-        content = ask_openrouter(prompt)
-
-    except Exception as e:
-        print("OpenRouter failed:", e)
+        prompt = build_prompt(mode, db["history"])
 
         try:
-            print("Using Groq fallback...")
-            content = ask_groq(prompt)
+            content = ask_openrouter(prompt)
 
-        except Exception as ex:
-            print("Groq failed:", ex)
-            return None
+        except Exception as e:
 
-    verified_content = verify_content(content)
+            print("OpenRouter failed:", e)
 
-    return verified_content
+            try:
+                content = ask_groq(prompt)
 
+            except Exception as ex:
+                print("Groq failed:", ex)
+                continue
 
-# ==============================
-# MAIN MISSION
-# ==============================
+        content = verify_content(content)
+
+        lines = content.split("\n")
+
+        if len(lines) < 2:
+            continue
+
+        title = lines[1].strip()
+
+        if topic_exists(db, title):
+            print("Duplicate topic skipped.")
+            continue
+
+        return content, title
+
+    return None, None
+
+# =========================================
+# MAIN
+# =========================================
 
 def run_mission():
+
     db = load_database()
 
-    content = generate_post(db["history"])
+    content, title = generate_post(db)
 
     if not content:
-        print("Failed to generate content.")
+        print("Failed to generate unique content.")
         return
 
     watermark = "\n\n━━━━━━━━━━━━━━\n🚀 CodeBilArabi"
 
     final_post = content + watermark
 
-    success = send_telegram_message(final_post)
+    success = send_telegram(final_post)
 
-    if success:
-        print("Post sent successfully.")
-
-        lines = content.split("\n")
-
-        if len(lines) > 1:
-            title = lines[1].strip()
-        else:
-            title = lines[0].strip()
-
-        db["history"].append(title)
-
-        db["history"] = db["history"][-50:]
-
-        save_database(db)
-
-    else:
+    if not success:
         print("Telegram send failed.")
+        return
 
+    db["history"].append({
+        "title": title,
+        "date": str(datetime.utcnow())
+    })
 
-# ==============================
+    db["history"] = db["history"][-100:]
+
+    save_topic(db, title)
+
+    save_database(db)
+
+    print("Post sent successfully.")
+
+# =========================================
 # ENTRY
-# ==============================
+# =========================================
 
 if __name__ == "__main__":
     run_mission()
