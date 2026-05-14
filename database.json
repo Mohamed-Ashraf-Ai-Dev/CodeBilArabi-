@@ -1,4 +1,11 @@
 {
-  "history": [],
-  "topic_hashes": []
+  "history": [
+    {
+      "title": "Failure Scenarios in Split-Brain Clusters",
+      "date": "2026-05-14 22:12:34.545603"
+    }
+  ],
+  "topic_hashes": [
+    "a914adbd2dfd25e4f43936a42fbbc4e7"
+  ]
 }
