@@ -12,55 +12,55 @@ CHAT_ID = os.getenv("CHAT_ID")
 def get_ai_content(history):
     recent_history = history[-50:]
     
-    # مصفوفة المسارات لضمان الاختيار العشوائي الحقيقي من طرف الكود وليس الـ AI
+    # تصنيفات تقنية عميقة
     categories = [
-        {"name": "System Design", "desc": "شرح معماري متقدم لـ Microservices أو Distributed Systems."},
-        {"name": "Deep Dive", "desc": "تحليل تقني لنواة أنظمة التشغيل أو مترجمات اللغات (Compilers)."},
-        {"name": "Logic Bug Challenge", "desc": "كود برمجي خبيث به Logic Error لا يكتشفه إلا خبير، مع طلب الحل."},
-        {"name": "Complete The Code", "desc": "تحدي إكمال دالة (Function) تتعامل مع Async أو Memory Management."},
-        {"name": "DevOps Architecture", "desc": "هيكلة CI/CD Pipelines أو Kubernetes Networking."},
-        {"name": "Security Internals", "desc": "تحليل لثغرات الـ Buffer Overflow أو الـ Logic Flaws في الـ Auth."}
+        "Kernel Internals & Memory Mapping",
+        "High-Concurrency & Locking Strategies",
+        "Distributed Systems Consensus (Raft/Paxos)",
+        "Compiler Optimization Techniques",
+        "Network Protocol Engineering (TCP/QUIC)",
+        "Advanced Cryptographic Implementation"
     ]
+    selected_topic = random.choice(categories)
     
-    selected = random.choice(categories)
-    
-    # برومبت صارم جداً يمنع الرغي واللغة الضعيفة
+    # برومبت مصمم خصيصاً لنموذج Gemma ليعطي أقصى أداء تقني
     prompt = f"""
-    You are a Elite Software Architect. Write a technical post for CodeBilArabi.
-    Target Audience: Senior Developers only.
-    Category: {selected['name']} ({selected['desc']})
-    History to avoid: {recent_history}
+    You are a Hardcore Systems Engineer. Write a technical post for CodeBilArabi.
+    Topic: {selected_topic}
+    History: {recent_history}
 
-    Strict Instructions:
-    1. Language: Heavy Technical Arabic (Keep English terms as is).
+    STRICT RULES:
+    1. Language: Arabic (Technical terms MUST remain in English).
     2. Format:
-       Line 1: [{selected['name']}]
-       Line 2: **Technical Title**
-       Details: Use bullet points. Explain "Behind the scenes" logic.
-    3. NO "Deep Dive" into Garbage Collection (Already done).
-    4. NO introductions ("In this post...", "Hello").
-    5. NO conclusions.
-    6. If it's a Challenge: Provide the code and ask for the fix/completion in the comments.
-    7. Be concise, aggressive, and highly technical.
+       [Category]
+       **Bold Technical Title**
+       - Use bullet points for raw engineering facts.
+       - Focus on "How it works under the hood".
+    3. If Category is a Challenge: Provide a complex code snippet with a subtle logic flaw.
+    4. NO fluff. NO greetings. NO translation errors.
     """
 
+    # استخدام Gemma 2 27B من خلال OpenRouter
     headers = {"Authorization": f"Bearer {OPENROUTER_API_KEY}"}
     payload = {
-        "model": "google/gemini-2.0-flash-exp:free",
-        "messages": [{"role": "system", "content": "You are a Senior Engineer who hates fluff and talks only in deep technical facts."},
-                     {"role": "user", "content": prompt}],
-        "temperature": 0.9 # رفع درجة الإبداع لمنع التكرار
+        "model": "google/gemma-2-27b-it", # تم التغيير إلى Gemma 2
+        "messages": [
+            {"role": "system", "content": "You are a specialized software architect. You speak only in technical facts and code."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.9
     }
 
     try:
         response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=payload, timeout=30)
         return response.json()['choices'][0]['message']['content'].strip()
-    except:
-        # البديل في حال الفشل
+    except Exception as e:
+        print(f"Gemma failed, falling back to Llama: {e}")
+        # البديل في حال تعطل Gemma (Llama 3.3 70B)
         headers_groq = {"Authorization": f"Bearer {GROQ_API_KEY}"}
-        response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers_groq, 
-                                 json={"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}]}, timeout=30)
-        return response.json()['choices'][0]['message']['content'].strip()
+        res = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers_groq, 
+                            json={"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}]}, timeout=30)
+        return res.json()['choices'][0]['message']['content'].strip()
 
 def run_mission():
     with open("database.json", "r", encoding="utf-8") as f:
@@ -68,17 +68,15 @@ def run_mission():
     
     raw_content = get_ai_content(db["history"])
     
-    # التوقيع الرسمي النهائي
+    # التوقيع الرسمي
     watermark = "\n\n━━━━━━━━━━━━━━\n🚀 **CodeBilArabi**"
-    final_post = raw_content + watermark
     
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    requests.post(url, data={"chat_id": CHAT_ID, "text": final_post, "parse_mode": "Markdown"})
+    requests.post(url, data={"chat_id": CHAT_ID, "text": raw_content + watermark, "parse_mode": "Markdown"})
     
-    # حفظ أول سطرين في الذاكرة
+    # حفظ التاريخ
     lines = raw_content.split('\n')
-    full_title = " - ".join([line.strip() for line in lines[:2] if line.strip()])
-    db["history"].append(full_title)
+    db["history"].append(" - ".join([line.strip() for line in lines[:2] if line.strip()]))
     
     with open("database.json", "w", encoding="utf-8") as f:
         json.dump(db, f, ensure_ascii=False, indent=2)
