@@ -37,6 +37,12 @@
       "mode": "Security Research",
       "date": "2026-05-15T01:01:47.265247+00:00",
       "content_hash": "ae63adab5ec6a9c316ac1a4b268411d9"
+    },
+    {
+      "title": "الـ Callback Hell: ليه الديبي بيبقى في مشاكل؟",
+      "mode": "Code Review Roast",
+      "date": "2026-05-15T15:20:51.502072+00:00",
+      "content_hash": "7e0d3184d69140c522bd6128ca747b33"
     }
   ],
   "topic_hashes": [
@@ -46,10 +52,11 @@
     "5b13e17ed77bc629b5f74f233ba7d07d",
     "daf73918ca09e054292529fa1a3dd6f3",
     "e732a02a456c30bdfa9b50fb0e91d604",
-    "38bd2553d0a546d2e03367af3076f3ef"
+    "38bd2553d0a546d2e03367af3076f3ef",
+    "fb6f45ebf7dd59d2785bdbbdf5cc5198"
   ],
   "stats": {
-    "total_sent": 3,
+    "total_sent": 4,
     "total_failed": 0
   }
 }
