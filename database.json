@@ -19,12 +19,23 @@
       "title": "**الـغربيجه كوليكشن: ليه الهيب بيعملها مشاكل أحيانا؟**",
       "mode": "Low-Level Internals",
       "date": "2026-05-15 00:24:09.385091"
+    },
+    {
+      "title": "التشبيك في Security",
+      "mode": "Security Research",
+      "date": "2026-05-15T00:37:30.119630+00:00",
+      "content_hash": "60927be82dd81e0bf57102d4fc2c23aa"
     }
   ],
   "topic_hashes": [
     "d41d8cd98f00b204e9800998ecf8427e",
     "6209a5b8a4a32413bb356bd6e49b8d89",
     "95b2965611254e8142e618ec3e34dda7",
-    "5b13e17ed77bc629b5f74f233ba7d07d"
-  ]
+    "5b13e17ed77bc629b5f74f233ba7d07d",
+    "daf73918ca09e054292529fa1a3dd6f3"
+  ],
+  "stats": {
+    "total_sent": 1,
+    "total_failed": 0
+  }
 }
