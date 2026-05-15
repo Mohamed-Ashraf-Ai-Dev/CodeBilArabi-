@@ -16,7 +16,7 @@ CHAT_ID = os.getenv("CHAT_ID")
 DATABASE_FILE = "database.json"
 
 # =========================================
-# CONTENT MODES & BLACKLIST
+# CONTENT MODES
 # =========================================
 CONTENT_MODES = [
     "War Story", "Architecture Breakdown", "Performance Crime",
@@ -29,7 +29,7 @@ TOPIC_BLACKLIST = [
 ]
 
 # =========================================
-# DB FUNCTIONS
+# DB
 # =========================================
 def load_database():
     if not os.path.exists(DATABASE_FILE):
@@ -58,57 +58,111 @@ def save_topic(db, title):
     db["topic_hashes"] = db["topic_hashes"][-300:]
 
 # =========================================
-# THE PERFECT PROMPT
+# PROMPT - STRICT VERSION
 # =========================================
 def build_prompt(mode, history):
     history_titles = [h.get("title", "") if isinstance(h, dict) else str(h) for h in history[-20:]]
 
     return f"""
-أنت مهندس برمجيات Senior مصري صايع. اكتب بوست تقني لقناة "CodeBilArabi" على تليجرام.
+You are a Senior Software Engineer. Write a technical Telegram post for "CodeBilArabi".
 
-النوع: {mode}
-المواضيع السابقة (ممنوع تكرارها): {history_titles}
+MODE: {mode}
+EXCLUDE TITLES: {history_titles}
 
-التعليمات الصارمة:
-1. اللغة: لغة المهندسين في مصر (عامية تقنية + المصطلحات التقنية بالإنجليزية كما هي).
-2. ممنوع تماماً: الفصحى، الترجمة الحرفية (مثل: إعادة المحاولة، تضاربات، قُم بتنفيذ). استخدم بدلها: Retry logic، الـ Trade-offs، اعمل Implementation.
-3. الأسلوب: ادخل في صلب الموضوع فوراً. لا مقدمات (أهلاً بكم) ولا نهايات (شكراً لكم). البوست يبدأ بالعنوان وينتهي بآخر معلومة.
-4. الرموز: ممنوع الرموز الغريبة أو كثرة الـ Emojis. استخدم Markdown بسيط للكود فقط.
-5. الشخصية: شخص فاهم الـ Internals وبيركز على الـ Real-world problems.
+STRICT RULES:
+1. LANGUAGE: Egyptian Tech Slang (Ammiya) + English Technical terms.
+2. NO PROSE: No "Welcome", No "Here is the post", No "Notes", No "In conclusion".
+3. NO META: Do not explain what you did. Do not talk to the user.
+4. TONE: Professional, experienced, direct.
+5. FORMAT:
+   Line 1: [{mode}]
+   Line 2: Title
+   Line 3+: Content
 
-التنسيق:
+EXAMPLE:
 [{mode}]
-عنوان تقني صايع
-المحتوى المركز مباشرة
+العنوان هنا
+المحتوى التقني المركز مباشرة بدون رغي..
 """
 
 # =========================================
 # AI CORE
 # =========================================
-def ask_ai(prompt, model="google/gemma-2-27b-it"):
+def ask_ai(prompt):
     try:
-        # محاولة OpenRouter أولاً
         r = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
             headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}"},
             json={
-                "model": model,
+                "model": "google/gemma-2-27b-it",
                 "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.8,
-                "max_tokens": 1000
+                "temperature": 0.8
             },
             timeout=60
         )
-        r.raise_for_status()
         return r.json()["choices"][0]["message"]["content"].strip()
     except:
-        # Fallback لـ Groq بموديل Llama 3
         r = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
             headers={"Authorization": f"Bearer {GROQ_API_KEY}"},
             json={
                 "model": "llama-3.3-70b-versatile",
                 "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0.7
+            },
+            timeout=60
+        )
+        return r.json()["choices"][0]["message"]["content"].strip()
+
+def verify(content):
+    # الفلتر ده مهمته يمسح أي كلام زيادة الـ AI بيحطه
+    v_prompt = f"""
+This is a Telegram post. CLEAN IT UP.
+- Keep ONLY the post content.
+- Delete any notes like "I have removed...", "Notes:", "ملاحظات".
+- Ensure it starts with the [MODE] tag.
+- If it's in Fusha (formal Arabic), change it to Egyptian Tech Slang.
+
+POST TO CLEAN:
+{content}
+"""
+    return ask_ai(v_prompt)
+
+# =========================================
+# RUNNER
+# =========================================
+def run():
+    db = load_database()
+    
+    for _ in range(5):
+        mode = random.choice(CONTENT_MODES)
+        raw = ask_ai(build_prompt(mode, db["history"]))
+        clean = verify(raw)
+
+        # التحقق من الهيكل (Structure Check)
+        lines = [l.strip() for l in clean.split("\n") if l.strip()]
+        if len(lines) < 3 or not lines[0].startswith("["):
+            continue
+
+        title = lines[1]
+        if is_duplicate(db, title):
+            continue
+
+        final = clean + "\n\n━━━━━━━━━━━━━━\n🚀 CodeBilArabi"
+        
+        # Telegram Send
+        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+        res = requests.post(url, data={"chat_id": CHAT_ID, "text": final, "parse_mode": "Markdown"})
+        
+        if res.status_code == 200:
+            db["history"].append({"title": title, "mode": mode, "date": str(datetime.utcnow())})
+            save_topic(db, title)
+            save_database(db)
+            print(f"Success: {title}")
+            return
+
+if __name__ == "__main__":
+    run()
                 "temperature": 0.7,
                 "max_tokens": 1000
             },
