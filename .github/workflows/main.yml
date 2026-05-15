@@ -10,17 +10,19 @@ jobs:
   run-bot:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # ضروري لتعديل ملف الـ JSON
+      contents: write # ضروري عشان يقدر يعمل Push لتعديلات الـ JSON
+    
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # تحديث لآخر إصدار
         with:
-          fetch-depth: 0 # لجلب كل تاريخ الـ git لضمان نجاح الـ rebase
+          token: ${{ secrets.GITHUB_TOKEN }} # استخدام التوكن الافتراضي للـ Auth
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+          cache: 'pip' # بيسرع الـ Action في المرات الجاية
 
       - name: Install Dependencies
         run: pip install requests
@@ -34,18 +36,20 @@ jobs:
         run: python main.py
 
       - name: Save Memory (Update database.json)
+        # استخدمنا الـ Stash والـ Rebase عشان نضمن إن الـ Action ميفشلش لو فيه تغير في الـ Repo
         run: |
           git config --global user.name 'Mohamed-Ashraf-Bot'
           git config --global user.email 'bot@codebilarabi.ai'
           
-          # إضافة ملف الذاكرة فقط
           git add database.json
           
-          # عمل Commit لو فيه تغييرات
-          if git commit -m "Update memory log [skip ci]"; then
-            # سحب التغييرات الجديدة بـ Rebase لتفادي الـ Rejected Error
+          # التحقق من وجود تغييرات قبل الـ Commit
+          if ! git diff --cached --exit-code; then
+            git commit -m "Update memory log [skip ci]"
+            
+            # محاولة الـ Push مع التعامل مع الـ Race Conditions
             git pull --rebase origin main
             git push origin main
           else
-            echo "No changes to commit (Database is already up to date)."
+            echo "No changes in database.json. Skipping push."
           fi
