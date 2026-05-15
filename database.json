@@ -1,4 +1,12 @@
 {
-  "history": [],
-  "topic_hashes": []
+  "history": [
+    {
+      "title": "",
+      "mode": "Low-Level Internals",
+      "date": "2026-05-15 00:05:21.688406"
+    }
+  ],
+  "topic_hashes": [
+    "d41d8cd98f00b204e9800998ecf8427e"
+  ]
 }
