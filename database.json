@@ -25,6 +25,12 @@
       "mode": "Security Research",
       "date": "2026-05-15T00:37:30.119630+00:00",
       "content_hash": "60927be82dd81e0bf57102d4fc2c23aa"
+    },
+    {
+      "title": "الـ Loop مش بيشيل",
+      "mode": "Code Review Roast",
+      "date": "2026-05-15T00:47:14.628772+00:00",
+      "content_hash": "6bc479de2ea7b567c43c711fff0ed666"
     }
   ],
   "topic_hashes": [
@@ -32,10 +38,11 @@
     "6209a5b8a4a32413bb356bd6e49b8d89",
     "95b2965611254e8142e618ec3e34dda7",
     "5b13e17ed77bc629b5f74f233ba7d07d",
-    "daf73918ca09e054292529fa1a3dd6f3"
+    "daf73918ca09e054292529fa1a3dd6f3",
+    "e732a02a456c30bdfa9b50fb0e91d604"
   ],
   "stats": {
-    "total_sent": 1,
+    "total_sent": 2,
     "total_failed": 0
   }
 }
