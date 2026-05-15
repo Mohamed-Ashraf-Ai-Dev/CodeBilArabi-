@@ -3,7 +3,6 @@ import json
 import requests
 import random
 import hashlib
-import time
 from datetime import datetime
 
 # =========================================
@@ -17,7 +16,7 @@ CHAT_ID = os.getenv("CHAT_ID")
 DATABASE_FILE = "database.json"
 
 # =========================================
-# CONTENT MODES
+# CONTENT MODES & BLACKLIST
 # =========================================
 CONTENT_MODES = [
     "War Story", "Architecture Breakdown", "Performance Crime",
@@ -30,7 +29,7 @@ TOPIC_BLACKLIST = [
 ]
 
 # =========================================
-# DB
+# DB FUNCTIONS
 # =========================================
 def load_database():
     if not os.path.exists(DATABASE_FILE):
@@ -59,247 +58,115 @@ def save_topic(db, title):
     db["topic_hashes"] = db["topic_hashes"][-300:]
 
 # =========================================
-# PROMPT (The Brain)
+# THE PERFECT PROMPT
 # =========================================
 def build_prompt(mode, history):
     history_titles = [h.get("title", "") if isinstance(h, dict) else str(h) for h in history[-20:]]
 
     return f"""
-أنت مهندس برمجيات محترف (Senior Software Engineer) مصري، بتكتب لجمهور من المبرمجين المحترفين على تليجرام في قناة "CodeBilArabi".
+أنت مهندس برمجيات Senior مصري صايع. اكتب بوست تقني لقناة "CodeBilArabi" على تليجرام.
 
-الوضع (MODE): {mode}
-المواضيع السابقة (ممنوع التكرار): {history_titles}
-قائمة الممنوعات: {TOPIC_BLACKLIST}
+النوع: {mode}
+المواضيع السابقة (ممنوع تكرارها): {history_titles}
 
 التعليمات الصارمة:
-1. اللغة: "عربي مهندسين" (مزيج بين العامية المصرية التقنية والمصطلحات الإنجليزية كما هي).
-2. المحتوى: ادخل في الـ Deep Internals فوراً. ابعد عن الشرح الأكاديمي، ركز على الـ Trade-offs، الـ Performance، والـ Real-world bottlenecks.
-3. الشخصية: أنت شخص خبير، لغتك مباشرة، بلاش مقدمات ترحيبية أو ختاميات "AI" زي "في الختام".
-4. التنسيق: 
-   السطر 1: [{mode}]
-   السطر 2: عنوان تقني صايع (Technical Title)
-   الباقي: المحتوى التقني مباشرة.
+1. اللغة: لغة المهندسين في مصر (عامية تقنية + المصطلحات التقنية بالإنجليزية كما هي).
+2. ممنوع تماماً: الفصحى، الترجمة الحرفية (مثل: إعادة المحاولة، تضاربات، قُم بتنفيذ). استخدم بدلها: Retry logic، الـ Trade-offs، اعمل Implementation.
+3. الأسلوب: ادخل في صلب الموضوع فوراً. لا مقدمات (أهلاً بكم) ولا نهايات (شكراً لكم). البوست يبدأ بالعنوان وينتهي بآخر معلومة.
+4. الرموز: ممنوع الرموز الغريبة أو كثرة الـ Emojis. استخدم Markdown بسيط للكود فقط.
+5. الشخصية: شخص فاهم الـ Internals وبيركز على الـ Real-world problems.
 
-ملاحظة: لو الـ Mode هو "Elite Arena"، حط كود فيه Bug منطقي (Logic Bug) صعب، وقولهم "اكتب الحل في التعليقات".
-ممنوع استخدام الفصحى المملة.
+التنسيق:
+[{mode}]
+عنوان تقني صايع
+المحتوى المركز مباشرة
 """
 
 # =========================================
-# AI CALLS
+# AI CORE
 # =========================================
-def ask_ai(prompt):
-    # نحاول نكلم OpenRouter الأول
+def ask_ai(prompt, model="google/gemma-2-27b-it"):
     try:
+        # محاولة OpenRouter أولاً
         r = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
             headers={"Authorization": f"Bearer {OPENROUTER_API_KEY}"},
             json={
-                "model": "google/gemma-2-27b-it",
+                "model": model,
                 "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.7,
-                "max_tokens": 1200
+                "temperature": 0.8,
+                "max_tokens": 1000
             },
             timeout=60
         )
         r.raise_for_status()
         return r.json()["choices"][0]["message"]["content"].strip()
-    except Exception as e:
-        print(f"OpenRouter Failed, trying Groq... Error: {e}")
-        # Fallback لـ Groq
+    except:
+        # Fallback لـ Groq بموديل Llama 3
         r = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
             headers={"Authorization": f"Bearer {GROQ_API_KEY}"},
             json={
                 "model": "llama-3.3-70b-versatile",
                 "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.6,
-                "max_tokens": 1200
+                "temperature": 0.7,
+                "max_tokens": 1000
             },
             timeout=60
         )
         r.raise_for_status()
         return r.json()["choices"][0]["message"]["content"].strip()
 
-# =========================================
-# VERIFICATION (The Filter)
-# =========================================
 def verify(content):
     v_prompt = f"""
-أعد صياغة البوست التالي ليكون أكثر واقعية لمهندس برمجيات خبير. 
-- احذف أي جمل تبدو وكأنها مكتوبة بواسطة ذكاء اصطناعي.
-- اجعل المصطلحات التقنية بالإنجليزية (English).
-- استخدم العامية المصرية التقنية (Tech Egyptian Slang).
-- حافظ على العمق الهندسي.
+راجع البوست ده كأنك مهندس مصري شغال في شركة كبيرة. 
+1. امسح أي جملة فيها ريحة ذكاء اصطناعي أو ترحيب.
+2. اقلب أي كلمة فصحى لعامية تقنية مصرية.
+3. تأكد إن المصطلحات التقنية مكتوبة بالإنجليزية.
+4. لو فيه رموز غريبة أو تنسيق زبالة صلحها.
 
-البوست الأصلي:
+البوست:
 {content}
 """
-    try:
-        return ask_ai(v_prompt)
-    except:
-        return content
+    return ask_ai(v_prompt, model="google/gemma-2-27b-it")
 
 # =========================================
-# TELEGRAM
+# TELEGRAM & MAIN LOGIC
 # =========================================
 def send(text):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    payload = {
-        "chat_id": CHAT_ID,
-        "text": text,
-        "parse_mode": "Markdown" 
-    }
+    # تنظيف النص من أي Markdown قد يكسر تليجرام
+    payload = {"chat_id": CHAT_ID, "text": text, "parse_mode": "Markdown"}
     try:
         r = requests.post(url, data=payload)
         return r.status_code == 200
     except:
         return False
 
-# =========================================
-# GENERATION LOGIC
-# =========================================
-def generate(db):
-    for attempt in range(5):
-        print(f"Attempt {attempt + 1}...")
-        mode = random.choice(CONTENT_MODES)
-        prompt = build_prompt(mode, db["history"])
-        
-        content = ask_ai(prompt)
-        content = verify(content)
-
-        lines = [line.strip() for line in content.split("\n") if line.strip()]
-        if len(lines) < 2:
-            continue
-
-        title = lines[1]
-        if is_duplicate(db, title):
-            print(f"Duplicate found: {title}. Retrying...")
-            continue
-
-        return content, title, mode
-    return None, None, None
-
-# =========================================
-# MAIN
-# =========================================
 def run():
     db = load_database()
-    content, title, mode = generate(db)
-
-    if not content:
-        print("Failed to generate unique content.")
-        return
-
-    final_post = f"{content}\n\n━━━━━━━━━━━━━━\n🚀 CodeBilArabi"
-
-    if send(final_post):
-        db["history"].append({
-            "title": title,
-            "mode": mode,
-            "date": str(datetime.utcnow())
-        })
-        save_topic(db, title)
-        save_database(db)
-        print(f"Successfully posted: {title}")
-    else:
-        print("Failed to send message to Telegram.")
-
-if __name__ == "__main__":
-    run()
-def ask_groq(prompt):
-    r = requests.post(
-        "https://api.groq.com/openai/v1/chat/completions",
-        headers={"Authorization": f"Bearer {GROQ_API_KEY}"},
-        json={
-            "model": "llama-3.3-70b-versatile",
-            "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.5,
-            "max_tokens": 1200
-        },
-        timeout=60
-    )
-    r.raise_for_status()
-    return r.json()["choices"][0]["message"]["content"].strip()
-
-# =========================================
-# VERIFICATION
-# =========================================
-def verify(content):
-    prompt = f"Fix this engineering post: remove AI tone, improve realism, keep technical depth.\n\nPOST:\n{content}"
-    try:
-        # Try to use a faster/cheaper model for verification if needed
-        return ask_groq(prompt)
-    except:
-        return content
-
-# =========================================
-# TELEGRAM
-# =========================================
-def send(text):
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    payload = {
-        "chat_id": CHAT_ID,
-        "text": text,
-        "parse_mode": "Markdown" # Optional: to support code blocks
-    }
-    r = requests.post(url, data=payload)
-    return r.status_code == 200
-
-# =========================================
-# GENERATION
-# =========================================
-def generate(db):
+    
     for _ in range(5):
         mode = random.choice(CONTENT_MODES)
-        prompt = build_prompt(mode, db["history"])
+        raw_content = ask_ai(build_prompt(mode, db["history"]))
+        clean_content = verify(raw_content)
+
+        lines = [l for l in clean_content.split("\n") if l.strip()]
+        if len(lines) < 2: continue
         
-        try:
-            content = ask_openrouter(prompt)
-        except:
-            try:
-                content = ask_groq(prompt)
-            except:
-                continue
+        title = lines[1]
+        if is_duplicate(db, title): continue
 
-        content = verify(content)
-        lines = content.split("\n")
-        if len(lines) < 2:
-            continue
+        final_post = clean_content + "\n\n━━━━━━━━━━━━━━\n🚀 CodeBilArabi"
+        
+        if send(final_post):
+            db["history"].append({"title": title, "mode": mode, "date": str(datetime.utcnow())})
+            save_topic(db, title)
+            save_database(db)
+            print(f"Posted: {title}")
+            return
+    
+    print("Failed to generate or send.")
 
-        title = lines[1].strip()
-        if is_duplicate(db, title):
-            continue
-
-        return content, title, mode
-    return None, None, None
-
-# =========================================
-# MAIN
-# =========================================
-def run():
-    db = load_database()
-    content, title, mode = generate(db)
-
-    if not content:
-        print("No content generated")
-        return
-
-    final = f"{content}\n\n━━━━━━━━━━━━━━\n🚀 CodeBilArabi"
-
-    if send(final):
-        db["history"].append({
-            "title": title,
-            "mode": mode,
-            "date": str(datetime.utcnow())
-        })
-        save_topic(db, title)
-        save_database(db)
-        print(f"Posted: {title}")
-    else:
-        print("Telegram failed")
-
-# =========================================
-# ENTRY
-# =========================================
 if __name__ == "__main__":
     run()
