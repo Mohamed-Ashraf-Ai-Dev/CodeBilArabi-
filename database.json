@@ -1,4 +1,17 @@
 {
-  "history": [],
-  "topic_hashes": []
+  "history": [
+    {
+      "title": "**كود الإحصائيات في تطبيق تيك توك**",
+      "mode": "Architecture Breakdown",
+      "date": "2026-05-15T16:58:26.000183+00:00",
+      "content_hash": "6bb8007f29fc01cfbc29c7fd050336e1"
+    }
+  ],
+  "topic_hashes": [
+    "96463f46d8c8bc0ed84b86a2ae840f6a"
+  ],
+  "stats": {
+    "total_sent": 1,
+    "total_failed": 0
+  }
 }
