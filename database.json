@@ -11,14 +11,21 @@
       "mode": "API Design Sins",
       "date": "2026-05-15T19:50:45.103586+00:00",
       "content_hash": "e114180cf5a00165f6e661a9058d898f"
+    },
+    {
+      "title": "SQL Injection: The Silent Killer in Your App",
+      "mode": "Database War",
+      "date": "2026-05-16T14:24:20.533512+00:00",
+      "content_hash": "64e847076e32672671b8403dfb65e921"
     }
   ],
   "topic_hashes": [
     "96463f46d8c8bc0ed84b86a2ae840f6a",
-    "46cfc45627b60e10d8450e4acf66f0a9"
+    "46cfc45627b60e10d8450e4acf66f0a9",
+    "35ae00abb29cab4da7b386cf7aab732a"
   ],
   "stats": {
-    "total_sent": 2,
+    "total_sent": 3,
     "total_failed": 0
   }
 }
