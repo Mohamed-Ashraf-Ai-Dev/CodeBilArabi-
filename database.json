@@ -29,6 +29,12 @@
       "mode": "War Story",
       "date": "2026-05-17T14:27:31.870822+00:00",
       "content_hash": "1b3aa88b26532af5b1cfad0e83ba59f2"
+    },
+    {
+      "title": "يا شباب، الـ \"garbage collection\" مش **just** garbage",
+      "mode": "Myth Busting",
+      "date": "2026-05-17T19:16:10.410654+00:00",
+      "content_hash": "5728c5f742b4bcecb160c56c469ca6d0"
     }
   ],
   "topic_hashes": [
@@ -36,10 +42,11 @@
     "46cfc45627b60e10d8450e4acf66f0a9",
     "35ae00abb29cab4da7b386cf7aab732a",
     "31e45bbe7bfddde4dcd2c91461b70f66",
-    "0f45572ff6cf99c430ce3708c2c7383f"
+    "0f45572ff6cf99c430ce3708c2c7383f",
+    "7f177e41a330602ead3a8b9088b79b99"
   ],
   "stats": {
-    "total_sent": 5,
+    "total_sent": 6,
     "total_failed": 0
   }
 }
