@@ -41,6 +41,12 @@
       "mode": "Code Review Roast",
       "date": "2026-05-18T16:29:53.610820+00:00",
       "content_hash": "b5c1831528af111d3d8861906ce93999"
+    },
+    {
+      "title": "الـ \"Heap\" والـ \"Stack\": حكايات ونصائح من ساحة المعركة",
+      "mode": "Memory Management Deep Dive",
+      "date": "2026-05-18T19:50:24.485183+00:00",
+      "content_hash": "a68e4ed6dff202bb61e9e4a5bce07a20"
     }
   ],
   "topic_hashes": [
@@ -50,10 +56,11 @@
     "31e45bbe7bfddde4dcd2c91461b70f66",
     "0f45572ff6cf99c430ce3708c2c7383f",
     "7f177e41a330602ead3a8b9088b79b99",
-    "0b835feef6ef6fa8de694518c76cf6e7"
+    "0b835feef6ef6fa8de694518c76cf6e7",
+    "7c1c0bb5ed81aa811d83af1875b0a045"
   ],
   "stats": {
-    "total_sent": 7,
+    "total_sent": 8,
     "total_failed": 0
   }
 }
