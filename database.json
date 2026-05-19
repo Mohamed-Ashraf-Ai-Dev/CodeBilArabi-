@@ -53,6 +53,12 @@
       "mode": "Myth Busting",
       "date": "2026-05-19T16:26:06.907131+00:00",
       "content_hash": "92bafffaac87e9a5129466fae99dc818"
+    },
+    {
+      "title": "## عن Caching الضرب و  الـ Performance  اللعين",
+      "mode": "War Story",
+      "date": "2026-05-19T19:57:40.277151+00:00",
+      "content_hash": "009db81987b00311bd246e1d8b096899"
     }
   ],
   "topic_hashes": [
@@ -64,10 +70,11 @@
     "7f177e41a330602ead3a8b9088b79b99",
     "0b835feef6ef6fa8de694518c76cf6e7",
     "7c1c0bb5ed81aa811d83af1875b0a045",
-    "b058447b1d2fc23b8a4347c4983b5fb4"
+    "b058447b1d2fc23b8a4347c4983b5fb4",
+    "cc9078e3ce90482830ec51e373f74dc9"
   ],
   "stats": {
-    "total_sent": 9,
+    "total_sent": 10,
     "total_failed": 0
   }
 }
