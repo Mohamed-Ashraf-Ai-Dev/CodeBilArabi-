@@ -47,6 +47,12 @@
       "mode": "Memory Management Deep Dive",
       "date": "2026-05-18T19:50:24.485183+00:00",
       "content_hash": "a68e4ed6dff202bb61e9e4a5bce07a20"
+    },
+    {
+      "title": "الح Agassiz",
+      "mode": "Myth Busting",
+      "date": "2026-05-19T16:26:06.907131+00:00",
+      "content_hash": "92bafffaac87e9a5129466fae99dc818"
     }
   ],
   "topic_hashes": [
@@ -57,10 +63,11 @@
     "0f45572ff6cf99c430ce3708c2c7383f",
     "7f177e41a330602ead3a8b9088b79b99",
     "0b835feef6ef6fa8de694518c76cf6e7",
-    "7c1c0bb5ed81aa811d83af1875b0a045"
+    "7c1c0bb5ed81aa811d83af1875b0a045",
+    "b058447b1d2fc23b8a4347c4983b5fb4"
   ],
   "stats": {
-    "total_sent": 8,
+    "total_sent": 9,
     "total_failed": 0
   }
 }
