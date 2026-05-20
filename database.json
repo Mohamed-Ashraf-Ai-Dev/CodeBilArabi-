@@ -59,6 +59,12 @@
       "mode": "War Story",
       "date": "2026-05-19T19:57:40.277151+00:00",
       "content_hash": "009db81987b00311bd246e1d8b096899"
+    },
+    {
+      "title": "الـ \"Memory Leaks\" :  القاتل الصامت في كودك",
+      "mode": "Memory Management Deep Dive",
+      "date": "2026-05-20T16:29:19.228253+00:00",
+      "content_hash": "b24c65fefab63ed57f8123202f8a0e0f"
     }
   ],
   "topic_hashes": [
@@ -71,10 +77,11 @@
     "0b835feef6ef6fa8de694518c76cf6e7",
     "7c1c0bb5ed81aa811d83af1875b0a045",
     "b058447b1d2fc23b8a4347c4983b5fb4",
-    "cc9078e3ce90482830ec51e373f74dc9"
+    "cc9078e3ce90482830ec51e373f74dc9",
+    "54123b38f8387cbc67e5144613934d9a"
   ],
   "stats": {
-    "total_sent": 10,
+    "total_sent": 11,
     "total_failed": 0
   }
 }
