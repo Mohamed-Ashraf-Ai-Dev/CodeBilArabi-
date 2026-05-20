@@ -65,6 +65,12 @@
       "mode": "Memory Management Deep Dive",
       "date": "2026-05-20T16:29:19.228253+00:00",
       "content_hash": "b24c65fefab63ed57f8123202f8a0e0f"
+    },
+    {
+      "title": "الـ \"Cross-Site Scripting (XSS)\" :  خدعة شائعة في الـ \"Web Security\"",
+      "mode": "Security Research",
+      "date": "2026-05-20T20:24:02.687705+00:00",
+      "content_hash": "6152fc37a1efd537ff98c3990b62da36"
     }
   ],
   "topic_hashes": [
@@ -78,10 +84,11 @@
     "7c1c0bb5ed81aa811d83af1875b0a045",
     "b058447b1d2fc23b8a4347c4983b5fb4",
     "cc9078e3ce90482830ec51e373f74dc9",
-    "54123b38f8387cbc67e5144613934d9a"
+    "54123b38f8387cbc67e5144613934d9a",
+    "c475b40fc5571695b14a2dc3e01afb77"
   ],
   "stats": {
-    "total_sent": 11,
+    "total_sent": 12,
     "total_failed": 0
   }
 }
