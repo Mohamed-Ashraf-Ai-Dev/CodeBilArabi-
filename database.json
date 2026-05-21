@@ -77,6 +77,12 @@
       "mode": "API Design Sins",
       "date": "2026-05-21T16:18:48.469320+00:00",
       "content_hash": "e4d05ab2464c159910894ac1fd690731"
+    },
+    {
+      "title": "Firebase : لما تبقى عايز تحط مشروع في السحابة بس",
+      "mode": "Architecture Breakdown",
+      "date": "2026-05-21T20:00:06.583999+00:00",
+      "content_hash": "8cc80a3be19032edf9576f9f558705d4"
     }
   ],
   "topic_hashes": [
@@ -92,10 +98,11 @@
     "cc9078e3ce90482830ec51e373f74dc9",
     "54123b38f8387cbc67e5144613934d9a",
     "c475b40fc5571695b14a2dc3e01afb77",
-    "ebecbfec6bc2bcf0db470ceb1bb56652"
+    "ebecbfec6bc2bcf0db470ceb1bb56652",
+    "fa5e9016f52b05c8a915f9fe4b490312"
   ],
   "stats": {
-    "total_sent": 13,
+    "total_sent": 14,
     "total_failed": 0
   }
 }
