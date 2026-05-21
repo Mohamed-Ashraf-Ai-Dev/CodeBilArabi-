@@ -71,6 +71,12 @@
       "mode": "Security Research",
       "date": "2026-05-20T20:24:02.687705+00:00",
       "content_hash": "6152fc37a1efd537ff98c3990b62da36"
+    },
+    {
+      "title": "الـ \"Rate Limiting\":  ما في أسهل من كده",
+      "mode": "API Design Sins",
+      "date": "2026-05-21T16:18:48.469320+00:00",
+      "content_hash": "e4d05ab2464c159910894ac1fd690731"
     }
   ],
   "topic_hashes": [
@@ -85,10 +91,11 @@
     "b058447b1d2fc23b8a4347c4983b5fb4",
     "cc9078e3ce90482830ec51e373f74dc9",
     "54123b38f8387cbc67e5144613934d9a",
-    "c475b40fc5571695b14a2dc3e01afb77"
+    "c475b40fc5571695b14a2dc3e01afb77",
+    "ebecbfec6bc2bcf0db470ceb1bb56652"
   ],
   "stats": {
-    "total_sent": 12,
+    "total_sent": 13,
     "total_failed": 0
   }
 }
