@@ -101,6 +101,12 @@
       "mode": "Security Research",
       "date": "2026-05-23T14:41:45.123303+00:00",
       "content_hash": "f6a90766529d4374af74f133e6f44ae6"
+    },
+    {
+      "title": "الـ Load Balancing:  من فيض الإشتباك في الـ \"cloud\"",
+      "mode": "Architecture Breakdown",
+      "date": "2026-05-23T19:18:47.507070+00:00",
+      "content_hash": "c1d76274b42933beb8ed7cedeb6955c1"
     }
   ],
   "topic_hashes": [
@@ -120,10 +126,11 @@
     "fa5e9016f52b05c8a915f9fe4b490312",
     "bb6cb38ed79102c45aabbe03abdaa877",
     "763906a4259b5ac2c797058d6a058fe2",
-    "b8afd89ee1de1f14fd30cb6b4b724142"
+    "b8afd89ee1de1f14fd30cb6b4b724142",
+    "9424f065e3ebde7a65f761bbaabaf397"
   ],
   "stats": {
-    "total_sent": 17,
-    "total_failed": 0
+    "total_sent": 18,
+    "total_failed": 1
   }
 }
