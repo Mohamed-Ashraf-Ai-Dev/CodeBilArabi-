@@ -95,6 +95,12 @@
       "mode": "War Story",
       "date": "2026-05-22T19:54:45.154375+00:00",
       "content_hash": "bd111dcfbb7d6b07969f92ed679b5669"
+    },
+    {
+      "title": "## **Credential Stuffing:** ستسرق حساباتك من غير ما تشوف",
+      "mode": "Security Research",
+      "date": "2026-05-23T14:41:45.123303+00:00",
+      "content_hash": "f6a90766529d4374af74f133e6f44ae6"
     }
   ],
   "topic_hashes": [
@@ -113,10 +119,11 @@
     "ebecbfec6bc2bcf0db470ceb1bb56652",
     "fa5e9016f52b05c8a915f9fe4b490312",
     "bb6cb38ed79102c45aabbe03abdaa877",
-    "763906a4259b5ac2c797058d6a058fe2"
+    "763906a4259b5ac2c797058d6a058fe2",
+    "b8afd89ee1de1f14fd30cb6b4b724142"
   ],
   "stats": {
-    "total_sent": 16,
+    "total_sent": 17,
     "total_failed": 0
   }
 }
