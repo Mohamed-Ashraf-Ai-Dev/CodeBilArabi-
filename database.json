@@ -113,6 +113,12 @@
       "mode": "Elite Arena",
       "date": "2026-05-24T14:27:09.769887+00:00",
       "content_hash": "78d9408463a1f44f69e5be1fcf55da7f"
+    },
+    {
+      "title": "الـ \"CSRF\" :  خدعة شائعة في الـ \"Web Security\"",
+      "mode": "Security Research",
+      "date": "2026-05-24T19:23:52.227716+00:00",
+      "content_hash": "f94fdeda7750609d869c362efbae0be0"
     }
   ],
   "topic_hashes": [
@@ -134,10 +140,11 @@
     "763906a4259b5ac2c797058d6a058fe2",
     "b8afd89ee1de1f14fd30cb6b4b724142",
     "9424f065e3ebde7a65f761bbaabaf397",
-    "d4f96e4ef767b0fc3f288b8b316294da"
+    "d4f96e4ef767b0fc3f288b8b316294da",
+    "5f32510b88e24beb2c918bf6d2fc5c0c"
   ],
   "stats": {
-    "total_sent": 19,
+    "total_sent": 20,
     "total_failed": 2
   }
 }
