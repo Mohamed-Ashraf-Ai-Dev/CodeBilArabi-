@@ -125,6 +125,12 @@
       "mode": "Distributed Systems Chaos",
       "date": "2026-05-25T15:55:04.498405+00:00",
       "content_hash": "da078dbdacd80a9e8df1d13a6bccea6c"
+    },
+    {
+      "title": "إيه اللي بيحصل في الـ \"Kernel\"  عندما  \"interrupt\"",
+      "mode": "Low-Level Internals",
+      "date": "2026-05-25T19:48:48.566170+00:00",
+      "content_hash": "470f32fe7a2dfc4dd10905618032f750"
     }
   ],
   "topic_hashes": [
@@ -148,10 +154,11 @@
     "9424f065e3ebde7a65f761bbaabaf397",
     "d4f96e4ef767b0fc3f288b8b316294da",
     "5f32510b88e24beb2c918bf6d2fc5c0c",
-    "5de41e28dd7da528747b9150b2dd340d"
+    "5de41e28dd7da528747b9150b2dd340d",
+    "a96e6217b97b1e74da07632bc6baa22a"
   ],
   "stats": {
-    "total_sent": 21,
+    "total_sent": 22,
     "total_failed": 2
   }
 }
