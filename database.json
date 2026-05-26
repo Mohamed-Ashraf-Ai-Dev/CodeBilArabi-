@@ -137,6 +137,12 @@
       "mode": "Performance Crime",
       "date": "2026-05-26T16:45:12.876088+00:00",
       "content_hash": "afa58eb56a465f4346d4db3b68031060"
+    },
+    {
+      "title": "## \"Code Review\" مش \"Condescending\"",
+      "mode": "Myth Busting",
+      "date": "2026-05-26T20:15:37.411107+00:00",
+      "content_hash": "61d7ad420feb45c5dee6e16874702b53"
     }
   ],
   "topic_hashes": [
@@ -162,10 +168,11 @@
     "5f32510b88e24beb2c918bf6d2fc5c0c",
     "5de41e28dd7da528747b9150b2dd340d",
     "a96e6217b97b1e74da07632bc6baa22a",
-    "9847a6368dc7741fc26b1b7895969aad"
+    "9847a6368dc7741fc26b1b7895969aad",
+    "5582a7971d59a36e0c94b8ad9c7d495e"
   ],
   "stats": {
-    "total_sent": 23,
+    "total_sent": 24,
     "total_failed": 2
   }
 }
