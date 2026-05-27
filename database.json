@@ -149,6 +149,12 @@
       "mode": "Code Review Roast",
       "date": "2026-05-27T16:40:27.020000+00:00",
       "content_hash": "7657de184960cf7010609013ae0fb5e4"
+    },
+    {
+      "title": "الكولابسيشن: لخناقات في الـ \"Database\"",
+      "mode": "Database War",
+      "date": "2026-05-27T20:27:46.732781+00:00",
+      "content_hash": "880c719b0ffd90947fb4aa8f6c7c9017"
     }
   ],
   "topic_hashes": [
@@ -176,10 +182,11 @@
     "a96e6217b97b1e74da07632bc6baa22a",
     "9847a6368dc7741fc26b1b7895969aad",
     "5582a7971d59a36e0c94b8ad9c7d495e",
-    "7a75c9ecfcfc54d14227bc635be33e06"
+    "7a75c9ecfcfc54d14227bc635be33e06",
+    "adb682a6a48d6861768fb978990dde56"
   ],
   "stats": {
-    "total_sent": 25,
+    "total_sent": 26,
     "total_failed": 2
   }
 }
