@@ -155,6 +155,12 @@
       "mode": "Database War",
       "date": "2026-05-27T20:27:46.732781+00:00",
       "content_hash": "880c719b0ffd90947fb4aa8f6c7c9017"
+    },
+    {
+      "title": "الـ\"Mutex\" :  مفارقة الـ \"Locking\"",
+      "mode": "Low-Level Internals",
+      "date": "2026-05-28T16:57:38.466667+00:00",
+      "content_hash": "b6d58a8e9decf8bdc5b0b88e5dd02049"
     }
   ],
   "topic_hashes": [
@@ -183,10 +189,11 @@
     "9847a6368dc7741fc26b1b7895969aad",
     "5582a7971d59a36e0c94b8ad9c7d495e",
     "7a75c9ecfcfc54d14227bc635be33e06",
-    "adb682a6a48d6861768fb978990dde56"
+    "adb682a6a48d6861768fb978990dde56",
+    "68b81131988e6a4bbfcd0efa50203866"
   ],
   "stats": {
-    "total_sent": 26,
+    "total_sent": 27,
     "total_failed": 2
   }
 }
