@@ -161,6 +161,12 @@
       "mode": "Low-Level Internals",
       "date": "2026-05-28T16:57:38.466667+00:00",
       "content_hash": "b6d58a8e9decf8bdc5b0b88e5dd02049"
+    },
+    {
+      "title": "الـ \"Deadlock\" :  الـ\"Bug\" اللي بيخنق كودك",
+      "mode": "Code Review Roast",
+      "date": "2026-05-28T20:30:14.438459+00:00",
+      "content_hash": "2b72b86b480c7e0e842d2589f11b1775"
     }
   ],
   "topic_hashes": [
@@ -190,10 +196,11 @@
     "5582a7971d59a36e0c94b8ad9c7d495e",
     "7a75c9ecfcfc54d14227bc635be33e06",
     "adb682a6a48d6861768fb978990dde56",
-    "68b81131988e6a4bbfcd0efa50203866"
+    "68b81131988e6a4bbfcd0efa50203866",
+    "8ef501801356265b532a8710d96f71b7"
   ],
   "stats": {
-    "total_sent": 27,
+    "total_sent": 28,
     "total_failed": 2
   }
 }
