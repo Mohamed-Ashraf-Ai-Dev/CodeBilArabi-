@@ -173,6 +173,12 @@
       "mode": "Myth Busting",
       "date": "2026-05-29T16:46:56.619853+00:00",
       "content_hash": "c3f2cfe9de3269160081271d47fc4ef7"
+    },
+    {
+      "title": "الـ \"Garbage Collection\" :  خناقة \"Memory\" في كودك",
+      "mode": "Performance Crime",
+      "date": "2026-05-29T20:32:48.618028+00:00",
+      "content_hash": "8f4eac49db3e53d5509d998a7a7e7879"
     }
   ],
   "topic_hashes": [
@@ -204,10 +210,11 @@
     "adb682a6a48d6861768fb978990dde56",
     "68b81131988e6a4bbfcd0efa50203866",
     "8ef501801356265b532a8710d96f71b7",
-    "32974d47443c8ec484bc8765836f8458"
+    "32974d47443c8ec484bc8765836f8458",
+    "c51403a37f99c05f9416bb7fef7c39cb"
   ],
   "stats": {
-    "total_sent": 29,
+    "total_sent": 30,
     "total_failed": 2
   }
 }
