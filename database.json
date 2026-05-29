@@ -167,6 +167,12 @@
       "mode": "Code Review Roast",
       "date": "2026-05-28T20:30:14.438459+00:00",
       "content_hash": "2b72b86b480c7e0e842d2589f11b1775"
+    },
+    {
+      "title": "**\"Code Style\" في \"Open Source\" مش غلط**",
+      "mode": "Myth Busting",
+      "date": "2026-05-29T16:46:56.619853+00:00",
+      "content_hash": "c3f2cfe9de3269160081271d47fc4ef7"
     }
   ],
   "topic_hashes": [
@@ -197,10 +203,11 @@
     "7a75c9ecfcfc54d14227bc635be33e06",
     "adb682a6a48d6861768fb978990dde56",
     "68b81131988e6a4bbfcd0efa50203866",
-    "8ef501801356265b532a8710d96f71b7"
+    "8ef501801356265b532a8710d96f71b7",
+    "32974d47443c8ec484bc8765836f8458"
   ],
   "stats": {
-    "total_sent": 28,
+    "total_sent": 29,
     "total_failed": 2
   }
 }
