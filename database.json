@@ -185,6 +185,12 @@
       "mode": "Myth Busting",
       "date": "2026-05-30T14:42:55.443058+00:00",
       "content_hash": "d19b6d53325f1546c4aece51b68431b5"
+    },
+    {
+      "title": "الـ \"Data Consistency\" في الـ\"Distributed Databases\" : قمر في السحابة",
+      "mode": "Distributed Systems Chaos",
+      "date": "2026-05-30T19:24:41.191807+00:00",
+      "content_hash": "ab4974480c9129cf02ac63e44409402e"
     }
   ],
   "topic_hashes": [
@@ -218,10 +224,11 @@
     "8ef501801356265b532a8710d96f71b7",
     "32974d47443c8ec484bc8765836f8458",
     "c51403a37f99c05f9416bb7fef7c39cb",
-    "f0362330218b327f2828a2a8a1e49e0a"
+    "f0362330218b327f2828a2a8a1e49e0a",
+    "5fd95c746f04f48a7681c9e0eee8e288"
   ],
   "stats": {
-    "total_sent": 31,
+    "total_sent": 32,
     "total_failed": 2
   }
 }
