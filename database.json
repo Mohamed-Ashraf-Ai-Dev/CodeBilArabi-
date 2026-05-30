@@ -179,6 +179,12 @@
       "mode": "Performance Crime",
       "date": "2026-05-29T20:32:48.618028+00:00",
       "content_hash": "8f4eac49db3e53d5509d998a7a7e7879"
+    },
+    {
+      "title": "الـ \"SQL Injection\" مش بس في الـ \"Web Apps\"",
+      "mode": "Myth Busting",
+      "date": "2026-05-30T14:42:55.443058+00:00",
+      "content_hash": "d19b6d53325f1546c4aece51b68431b5"
     }
   ],
   "topic_hashes": [
@@ -211,10 +217,11 @@
     "68b81131988e6a4bbfcd0efa50203866",
     "8ef501801356265b532a8710d96f71b7",
     "32974d47443c8ec484bc8765836f8458",
-    "c51403a37f99c05f9416bb7fef7c39cb"
+    "c51403a37f99c05f9416bb7fef7c39cb",
+    "f0362330218b327f2828a2a8a1e49e0a"
   ],
   "stats": {
-    "total_sent": 30,
+    "total_sent": 31,
     "total_failed": 2
   }
 }
