@@ -197,6 +197,12 @@
       "mode": "Database War",
       "date": "2026-05-31T14:50:05.617523+00:00",
       "content_hash": "e254c5f1f98ccd281e7e1e73a6ed3c8d"
+    },
+    {
+      "title": "الـ \"Caching\" :  المفتاح  لـ \"Performance\"  في \"Applications\"",
+      "mode": "Architecture Breakdown",
+      "date": "2026-05-31T19:24:12.821252+00:00",
+      "content_hash": "22cc14a2b4274eefbdbc26a227659426"
     }
   ],
   "topic_hashes": [
@@ -232,10 +238,11 @@
     "c51403a37f99c05f9416bb7fef7c39cb",
     "f0362330218b327f2828a2a8a1e49e0a",
     "5fd95c746f04f48a7681c9e0eee8e288",
-    "665993a3579f59b08014a154b950b694"
+    "665993a3579f59b08014a154b950b694",
+    "3f645de60bc77f21d60bc66150e7d0ef"
   ],
   "stats": {
-    "total_sent": 33,
+    "total_sent": 34,
     "total_failed": 2
   }
 }
