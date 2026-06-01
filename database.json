@@ -203,6 +203,12 @@
       "mode": "Architecture Breakdown",
       "date": "2026-05-31T19:24:12.821252+00:00",
       "content_hash": "22cc14a2b4274eefbdbc26a227659426"
+    },
+    {
+      "title": "## الـ \"Over-Engineering\" :  كود زاد في \"Complexity\"",
+      "mode": "Code Review Roast",
+      "date": "2026-06-01T18:42:04.606706+00:00",
+      "content_hash": "307e2011282a1ed67020947ea3c14dcd"
     }
   ],
   "topic_hashes": [
@@ -239,10 +245,11 @@
     "f0362330218b327f2828a2a8a1e49e0a",
     "5fd95c746f04f48a7681c9e0eee8e288",
     "665993a3579f59b08014a154b950b694",
-    "3f645de60bc77f21d60bc66150e7d0ef"
+    "3f645de60bc77f21d60bc66150e7d0ef",
+    "814dfd0012e5780a796043b82150fd88"
   ],
   "stats": {
-    "total_sent": 34,
+    "total_sent": 35,
     "total_failed": 2
   }
 }
