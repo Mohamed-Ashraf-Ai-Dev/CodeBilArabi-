@@ -209,6 +209,12 @@
       "mode": "Code Review Roast",
       "date": "2026-06-01T18:42:04.606706+00:00",
       "content_hash": "307e2011282a1ed67020947ea3c14dcd"
+    },
+    {
+      "title": "العنوان: ازاي تمنع الـ \"Resource Leak\" في كودك",
+      "mode": "Performance Crime",
+      "date": "2026-06-02T17:27:46.406566+00:00",
+      "content_hash": "782245fa24efc5231fb73793d1085900"
     }
   ],
   "topic_hashes": [
@@ -246,10 +252,11 @@
     "5fd95c746f04f48a7681c9e0eee8e288",
     "665993a3579f59b08014a154b950b694",
     "3f645de60bc77f21d60bc66150e7d0ef",
-    "814dfd0012e5780a796043b82150fd88"
+    "814dfd0012e5780a796043b82150fd88",
+    "3b8d06a782591a948eecb2eee6061e8e"
   ],
   "stats": {
-    "total_sent": 35,
+    "total_sent": 36,
     "total_failed": 2
   }
 }
