@@ -215,6 +215,12 @@
       "mode": "Performance Crime",
       "date": "2026-06-02T17:27:46.406566+00:00",
       "content_hash": "782245fa24efc5231fb73793d1085900"
+    },
+    {
+      "title": "ازاي تحمي بياناتك من الـ \"Data Breach\" في العصر الديجيتال",
+      "mode": "Security Research",
+      "date": "2026-06-02T20:55:55.503191+00:00",
+      "content_hash": "2ba4c189bb8efc9efe39ae03d95eae79"
     }
   ],
   "topic_hashes": [
@@ -253,10 +259,11 @@
     "665993a3579f59b08014a154b950b694",
     "3f645de60bc77f21d60bc66150e7d0ef",
     "814dfd0012e5780a796043b82150fd88",
-    "3b8d06a782591a948eecb2eee6061e8e"
+    "3b8d06a782591a948eecb2eee6061e8e",
+    "d6ef03acac5f914e5c36f8b51483858a"
   ],
   "stats": {
-    "total_sent": 36,
+    "total_sent": 37,
     "total_failed": 2
   }
 }
