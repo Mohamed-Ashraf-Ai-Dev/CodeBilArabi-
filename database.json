@@ -227,6 +227,12 @@
       "mode": "Performance Crime",
       "date": "2026-06-03T18:02:26.494165+00:00",
       "content_hash": "81017e45f7a8b7f249f1093f283a193a"
+    },
+    {
+      "title": "ازاي تحافظ على الـ \"Data Locality\" في كودك بتاع الـ \"Distributed Systems\"",
+      "mode": "Elite Arena",
+      "date": "2026-06-04T16:22:20.787742+00:00",
+      "content_hash": "1ad0668191e204775e2be939a5c4893e"
     }
   ],
   "topic_hashes": [
@@ -267,10 +273,11 @@
     "814dfd0012e5780a796043b82150fd88",
     "3b8d06a782591a948eecb2eee6061e8e",
     "d6ef03acac5f914e5c36f8b51483858a",
-    "0543f00d9c0e9a8ea994ae157581c32d"
+    "0543f00d9c0e9a8ea994ae157581c32d",
+    "4990c4d2a1ffeab1c8b17b95f7fa5c21"
   ],
   "stats": {
-    "total_sent": 38,
+    "total_sent": 39,
     "total_failed": 2
   }
 }
