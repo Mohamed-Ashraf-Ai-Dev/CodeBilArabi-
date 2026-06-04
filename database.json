@@ -233,6 +233,12 @@
       "mode": "Elite Arena",
       "date": "2026-06-04T16:22:20.787742+00:00",
       "content_hash": "1ad0668191e204775e2be939a5c4893e"
+    },
+    {
+      "title": "ازاي تتعامل مع الـ \"Partial Failure\" في النظم الموزعة؟",
+      "mode": "Distributed Systems Chaos",
+      "date": "2026-06-04T20:11:12.614667+00:00",
+      "content_hash": "2bd55d7b9d7312ab8d9cd55392896cbd"
     }
   ],
   "topic_hashes": [
@@ -274,10 +280,11 @@
     "3b8d06a782591a948eecb2eee6061e8e",
     "d6ef03acac5f914e5c36f8b51483858a",
     "0543f00d9c0e9a8ea994ae157581c32d",
-    "4990c4d2a1ffeab1c8b17b95f7fa5c21"
+    "4990c4d2a1ffeab1c8b17b95f7fa5c21",
+    "230fffc3840200d675e507e3a88aca26"
   ],
   "stats": {
-    "total_sent": 39,
+    "total_sent": 40,
     "total_failed": 2
   }
 }
