@@ -251,6 +251,12 @@
       "mode": "Elite Arena",
       "date": "2026-06-05T20:01:24.270841+00:00",
       "content_hash": "0bd7801a4af3d9566a9d78b9406b28f6"
+    },
+    {
+      "title": "ازاي تتعامل مع الـ \"Connection Pooling\" في كودك بتاع الـ \"Database Connections\"؟",
+      "mode": "Database War",
+      "date": "2026-06-06T14:46:05.159450+00:00",
+      "content_hash": "0eb9c93095c67de12b15598d7a7b0a68"
     }
   ],
   "topic_hashes": [
@@ -295,10 +301,11 @@
     "4990c4d2a1ffeab1c8b17b95f7fa5c21",
     "230fffc3840200d675e507e3a88aca26",
     "ad3947cf68d72b0af079dcc5f1d89b05",
-    "24b6040db1cb52abab632fc2516666dc"
+    "24b6040db1cb52abab632fc2516666dc",
+    "dd32841e3eabb6f4d5039acea14ec061"
   ],
   "stats": {
-    "total_sent": 42,
+    "total_sent": 43,
     "total_failed": 2
   }
 }
