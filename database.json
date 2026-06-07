@@ -269,6 +269,12 @@
       "mode": "Code Review Roast",
       "date": "2026-06-07T14:55:41.114624+00:00",
       "content_hash": "de2511f405054acee058e421d73e7639"
+    },
+    {
+      "title": "ازاي تتعامل مع الـ \"Error Handling\" في كودك بتاع الـ \"Distributed Systems\"؟",
+      "mode": "DevOps Horror",
+      "date": "2026-06-07T19:39:59.410603+00:00",
+      "content_hash": "be6b3f3c9d2aa36bbde59aad5dd92d05"
     }
   ],
   "topic_hashes": [
@@ -316,10 +322,11 @@
     "24b6040db1cb52abab632fc2516666dc",
     "dd32841e3eabb6f4d5039acea14ec061",
     "7251e074ee9303274e1e9f57d2390ca3",
-    "80315286cc55bb0f15a48f05e966590f"
+    "80315286cc55bb0f15a48f05e966590f",
+    "11be662fdf34fe82340339d3625b2deb"
   ],
   "stats": {
-    "total_sent": 45,
+    "total_sent": 46,
     "total_failed": 2
   }
 }
