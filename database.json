@@ -275,6 +275,12 @@
       "mode": "DevOps Horror",
       "date": "2026-06-07T19:39:59.410603+00:00",
       "content_hash": "be6b3f3c9d2aa36bbde59aad5dd92d05"
+    },
+    {
+      "title": "ازاي تتعامل مع الـ \"Resource Exhaustion\" في كودك بتاع الـ \"Cloud Services\"؟",
+      "mode": "Security Research",
+      "date": "2026-06-08T16:51:22.287109+00:00",
+      "content_hash": "d8551a40d2230c9c9b10712c763b2d56"
     }
   ],
   "topic_hashes": [
@@ -323,10 +329,11 @@
     "dd32841e3eabb6f4d5039acea14ec061",
     "7251e074ee9303274e1e9f57d2390ca3",
     "80315286cc55bb0f15a48f05e966590f",
-    "11be662fdf34fe82340339d3625b2deb"
+    "11be662fdf34fe82340339d3625b2deb",
+    "a4cb9cf6a9bc4aa111cbe13d9b31e2dd"
   ],
   "stats": {
-    "total_sent": 46,
+    "total_sent": 47,
     "total_failed": 2
   }
 }
