@@ -293,6 +293,12 @@
       "mode": "Concurrency Nightmare",
       "date": "2026-06-09T16:06:45.495500+00:00",
       "content_hash": "a11385f8bd6ca05fee58b290c01e4a50"
+    },
+    {
+      "title": "ازاي تمنع الـ \"Resource Leak\" في كودك بتاع الـ \"File Descriptors\"",
+      "mode": "Security Research",
+      "date": "2026-06-09T20:12:34.385818+00:00",
+      "content_hash": "c3b6be1c29ea6129914ac9ccbb629717"
     }
   ],
   "topic_hashes": [
@@ -344,10 +350,11 @@
     "11be662fdf34fe82340339d3625b2deb",
     "a4cb9cf6a9bc4aa111cbe13d9b31e2dd",
     "51e1d22cee2789e72a3a1b54499dbd40",
-    "5555a139ce84a69113fc9c80dc966ee7"
+    "5555a139ce84a69113fc9c80dc966ee7",
+    "ec23cd249c10f3337de9e44306c59c44"
   ],
   "stats": {
-    "total_sent": 49,
+    "total_sent": 50,
     "total_failed": 2
   }
 }
