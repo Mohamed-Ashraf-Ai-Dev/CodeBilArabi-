@@ -299,6 +299,12 @@
       "mode": "Security Research",
       "date": "2026-06-09T20:12:34.385818+00:00",
       "content_hash": "c3b6be1c29ea6129914ac9ccbb629717"
+    },
+    {
+      "title": "ازاي تمنع الـ \"File Descriptor Leak\" في كودك بتاع الـ \"Network Servers\"",
+      "mode": "Security Research",
+      "date": "2026-06-10T16:38:25.266614+00:00",
+      "content_hash": "4839e77b0a471cb8703518dd7b42f8e9"
     }
   ],
   "topic_hashes": [
@@ -351,10 +357,11 @@
     "a4cb9cf6a9bc4aa111cbe13d9b31e2dd",
     "51e1d22cee2789e72a3a1b54499dbd40",
     "5555a139ce84a69113fc9c80dc966ee7",
-    "ec23cd249c10f3337de9e44306c59c44"
+    "ec23cd249c10f3337de9e44306c59c44",
+    "41e08c363c198d08e1229a26dedb33cc"
   ],
   "stats": {
-    "total_sent": 50,
+    "total_sent": 51,
     "total_failed": 2
   }
 }
