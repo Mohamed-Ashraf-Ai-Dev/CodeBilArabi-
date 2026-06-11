@@ -317,6 +317,12 @@
       "mode": "API Design Sins",
       "date": "2026-06-11T16:58:07.868832+00:00",
       "content_hash": "85ec29522c09c506fff3c814ef609c37"
+    },
+    {
+      "title": "ازاي تتعامل مع الـ \"Tight Coupling\" في كودك بتاع الـ \"Microservices\"؟",
+      "mode": "API Design Sins",
+      "date": "2026-06-11T20:27:35.695386+00:00",
+      "content_hash": "ed7c3c46cf2861d0805bf1226de143ec"
     }
   ],
   "topic_hashes": [
@@ -372,10 +378,11 @@
     "ec23cd249c10f3337de9e44306c59c44",
     "41e08c363c198d08e1229a26dedb33cc",
     "8913ae5cda231938481359c895658c68",
-    "66825550abe6cead3bd996112b37d69a"
+    "66825550abe6cead3bd996112b37d69a",
+    "fdcba2944203a71dad5508042dbde46c"
   ],
   "stats": {
-    "total_sent": 53,
+    "total_sent": 54,
     "total_failed": 2
   }
 }
