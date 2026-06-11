@@ -311,6 +311,12 @@
       "mode": "Low-Level Internals",
       "date": "2026-06-10T20:37:03.436387+00:00",
       "content_hash": "a32f76ba4eb74851df7e399ba4b4c9fa"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"API Gateway\" بتاعك عشان تمنع الـ \"Single Point of Failure\"؟",
+      "mode": "API Design Sins",
+      "date": "2026-06-11T16:58:07.868832+00:00",
+      "content_hash": "85ec29522c09c506fff3c814ef609c37"
     }
   ],
   "topic_hashes": [
@@ -365,10 +371,11 @@
     "5555a139ce84a69113fc9c80dc966ee7",
     "ec23cd249c10f3337de9e44306c59c44",
     "41e08c363c198d08e1229a26dedb33cc",
-    "8913ae5cda231938481359c895658c68"
+    "8913ae5cda231938481359c895658c68",
+    "66825550abe6cead3bd996112b37d69a"
   ],
   "stats": {
-    "total_sent": 52,
+    "total_sent": 53,
     "total_failed": 2
   }
 }
