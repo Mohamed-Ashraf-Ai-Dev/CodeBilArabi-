@@ -323,6 +323,12 @@
       "mode": "API Design Sins",
       "date": "2026-06-11T20:27:35.695386+00:00",
       "content_hash": "ed7c3c46cf2861d0805bf1226de143ec"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Cache Invalidation\" في كودك بتاع الـ \"Distributed Systems\"？",
+      "mode": "Elite Arena",
+      "date": "2026-06-12T16:23:23.594112+00:00",
+      "content_hash": "3c8829c2f3b14aba81d2190a3fac0b02"
     }
   ],
   "topic_hashes": [
@@ -379,10 +385,11 @@
     "41e08c363c198d08e1229a26dedb33cc",
     "8913ae5cda231938481359c895658c68",
     "66825550abe6cead3bd996112b37d69a",
-    "fdcba2944203a71dad5508042dbde46c"
+    "fdcba2944203a71dad5508042dbde46c",
+    "aec289b9a52db14e002233c480a8ff8a"
   ],
   "stats": {
-    "total_sent": 54,
+    "total_sent": 55,
     "total_failed": 2
   }
 }
