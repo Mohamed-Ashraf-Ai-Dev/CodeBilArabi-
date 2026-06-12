@@ -329,6 +329,12 @@
       "mode": "Elite Arena",
       "date": "2026-06-12T16:23:23.594112+00:00",
       "content_hash": "3c8829c2f3b14aba81d2190a3fac0b02"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Context Switching\" في كودك بتاع الـ \"Multithreading\"؟",
+      "mode": "Low-Level Internals",
+      "date": "2026-06-12T20:16:59.532664+00:00",
+      "content_hash": "fd262b59a9643ceaf08b4094e081ee0c"
     }
   ],
   "topic_hashes": [
@@ -386,10 +392,11 @@
     "8913ae5cda231938481359c895658c68",
     "66825550abe6cead3bd996112b37d69a",
     "fdcba2944203a71dad5508042dbde46c",
-    "aec289b9a52db14e002233c480a8ff8a"
+    "aec289b9a52db14e002233c480a8ff8a",
+    "7c79364b725b8343372b4fbc63710f90"
   ],
   "stats": {
-    "total_sent": 55,
+    "total_sent": 56,
     "total_failed": 2
   }
 }
