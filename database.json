@@ -341,6 +341,12 @@
       "mode": "Elite Arena",
       "date": "2026-06-13T15:03:34.752047+00:00",
       "content_hash": "fed6a782f8f672b6803c8c5e74d71fa0"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Load Balancing\" في النظم الموزعة بتاعتك عشان تمنع الـ \" Bottleneck\"؟",
+      "mode": "Code Review Roast",
+      "date": "2026-06-13T19:43:31.659295+00:00",
+      "content_hash": "f5f2d98bfbacd0f787b574e2089fee34"
     }
   ],
   "topic_hashes": [
@@ -400,10 +406,11 @@
     "fdcba2944203a71dad5508042dbde46c",
     "aec289b9a52db14e002233c480a8ff8a",
     "7c79364b725b8343372b4fbc63710f90",
-    "b06341191965ac57c7a21801f1e63290"
+    "b06341191965ac57c7a21801f1e63290",
+    "891ed5b3bf20e33f3a9a43390baf676e"
   ],
   "stats": {
-    "total_sent": 57,
+    "total_sent": 58,
     "total_failed": 2
   }
 }
