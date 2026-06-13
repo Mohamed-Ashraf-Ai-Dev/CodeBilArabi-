@@ -335,6 +335,12 @@
       "mode": "Low-Level Internals",
       "date": "2026-06-12T20:16:59.532664+00:00",
       "content_hash": "fd262b59a9643ceaf08b4094e081ee0c"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Service Discovery\" في النظم الموزعة بتاعتك؟",
+      "mode": "Elite Arena",
+      "date": "2026-06-13T15:03:34.752047+00:00",
+      "content_hash": "fed6a782f8f672b6803c8c5e74d71fa0"
     }
   ],
   "topic_hashes": [
@@ -393,10 +399,11 @@
     "66825550abe6cead3bd996112b37d69a",
     "fdcba2944203a71dad5508042dbde46c",
     "aec289b9a52db14e002233c480a8ff8a",
-    "7c79364b725b8343372b4fbc63710f90"
+    "7c79364b725b8343372b4fbc63710f90",
+    "b06341191965ac57c7a21801f1e63290"
   ],
   "stats": {
-    "total_sent": 56,
+    "total_sent": 57,
     "total_failed": 2
   }
 }
