@@ -353,6 +353,12 @@
       "mode": "Memory Management Deep Dive",
       "date": "2026-06-14T15:09:24.349246+00:00",
       "content_hash": "3459a3e0f62a6289903e52b318d26cc0"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Memory Leaks\" في تطبيقاتك بتاعة الـ \"Cloud Native\"؟",
+      "mode": "War Story",
+      "date": "2026-06-14T19:43:30.965217+00:00",
+      "content_hash": "4712b796f20079190fbf47dac62f02ed"
     }
   ],
   "topic_hashes": [
@@ -414,10 +420,11 @@
     "7c79364b725b8343372b4fbc63710f90",
     "b06341191965ac57c7a21801f1e63290",
     "891ed5b3bf20e33f3a9a43390baf676e",
-    "469b57adf90c26257921c18e8e2f2438"
+    "469b57adf90c26257921c18e8e2f2438",
+    "ce58bbe54486aa1a78a2893fb25026de"
   ],
   "stats": {
-    "total_sent": 59,
+    "total_sent": 60,
     "total_failed": 2
   }
 }
