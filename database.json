@@ -347,6 +347,12 @@
       "mode": "Code Review Roast",
       "date": "2026-06-13T19:43:31.659295+00:00",
       "content_hash": "f5f2d98bfbacd0f787b574e2089fee34"
+    },
+    {
+      "title": "ازاي تدير الـ \"Memory Fragmentation\" في نظامك بتاع الـ \"Embedded Systems\"؟",
+      "mode": "Memory Management Deep Dive",
+      "date": "2026-06-14T15:09:24.349246+00:00",
+      "content_hash": "3459a3e0f62a6289903e52b318d26cc0"
     }
   ],
   "topic_hashes": [
@@ -407,10 +413,11 @@
     "aec289b9a52db14e002233c480a8ff8a",
     "7c79364b725b8343372b4fbc63710f90",
     "b06341191965ac57c7a21801f1e63290",
-    "891ed5b3bf20e33f3a9a43390baf676e"
+    "891ed5b3bf20e33f3a9a43390baf676e",
+    "469b57adf90c26257921c18e8e2f2438"
   ],
   "stats": {
-    "total_sent": 58,
+    "total_sent": 59,
     "total_failed": 2
   }
 }
