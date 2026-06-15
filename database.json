@@ -365,6 +365,12 @@
       "mode": "Database War",
       "date": "2026-06-15T18:00:13.686755+00:00",
       "content_hash": "09d7b368a0a22ff972f7dc70c2a2187d"
+    },
+    {
+      "title": "ازاي تتحكم في الـ \"Transaction Isolation\" في قواعد البيانات بتاعتك؟",
+      "mode": "Database War",
+      "date": "2026-06-15T21:11:45.196194+00:00",
+      "content_hash": "c3d71891b20634bc94c99935becdbb71"
     }
   ],
   "topic_hashes": [
@@ -428,10 +434,11 @@
     "891ed5b3bf20e33f3a9a43390baf676e",
     "469b57adf90c26257921c18e8e2f2438",
     "ce58bbe54486aa1a78a2893fb25026de",
-    "61a3fb27060c7a46d160e44efd3d246f"
+    "61a3fb27060c7a46d160e44efd3d246f",
+    "05fb03cdf46e8346ea62a130c7080c43"
   ],
   "stats": {
-    "total_sent": 61,
+    "total_sent": 62,
     "total_failed": 2
   }
 }
