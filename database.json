@@ -359,6 +359,12 @@
       "mode": "War Story",
       "date": "2026-06-14T19:43:30.965217+00:00",
       "content_hash": "4712b796f20079190fbf47dac62f02ed"
+    },
+    {
+      "title": "ازاي تتعامل مع الـ \"Database Sharding\" بتاعك عشان تتحمل زيادة الـ traffic؟",
+      "mode": "Database War",
+      "date": "2026-06-15T18:00:13.686755+00:00",
+      "content_hash": "09d7b368a0a22ff972f7dc70c2a2187d"
     }
   ],
   "topic_hashes": [
@@ -421,10 +427,11 @@
     "b06341191965ac57c7a21801f1e63290",
     "891ed5b3bf20e33f3a9a43390baf676e",
     "469b57adf90c26257921c18e8e2f2438",
-    "ce58bbe54486aa1a78a2893fb25026de"
+    "ce58bbe54486aa1a78a2893fb25026de",
+    "61a3fb27060c7a46d160e44efd3d246f"
   ],
   "stats": {
-    "total_sent": 60,
+    "total_sent": 61,
     "total_failed": 2
   }
 }
