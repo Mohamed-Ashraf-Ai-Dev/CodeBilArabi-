@@ -371,6 +371,12 @@
       "mode": "Database War",
       "date": "2026-06-15T21:11:45.196194+00:00",
       "content_hash": "c3d71891b20634bc94c99935becdbb71"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Starvation\" في كودك بتاع الـ \"Multithreading\"؟",
+      "mode": "Performance Crime",
+      "date": "2026-06-16T18:06:25.140328+00:00",
+      "content_hash": "792a7a4768978d5b240a4cdaa47e8ccc"
     }
   ],
   "topic_hashes": [
@@ -435,10 +441,11 @@
     "469b57adf90c26257921c18e8e2f2438",
     "ce58bbe54486aa1a78a2893fb25026de",
     "61a3fb27060c7a46d160e44efd3d246f",
-    "05fb03cdf46e8346ea62a130c7080c43"
+    "05fb03cdf46e8346ea62a130c7080c43",
+    "d9a4dfbc6a26909b08c638a0640b6d06"
   ],
   "stats": {
-    "total_sent": 62,
+    "total_sent": 63,
     "total_failed": 2
   }
 }
