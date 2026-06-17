@@ -377,6 +377,12 @@
       "mode": "Performance Crime",
       "date": "2026-06-16T18:06:25.140328+00:00",
       "content_hash": "792a7a4768978d5b240a4cdaa47e8ccc"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Mutex Contention\" في كودك بتاع الـ \"Multithreading\"؟",
+      "mode": "Concurrency Nightmare",
+      "date": "2026-06-17T16:40:39.202530+00:00",
+      "content_hash": "6bdf645b6b6d86d95a750f1dc83a3442"
     }
   ],
   "topic_hashes": [
@@ -442,10 +448,11 @@
     "ce58bbe54486aa1a78a2893fb25026de",
     "61a3fb27060c7a46d160e44efd3d246f",
     "05fb03cdf46e8346ea62a130c7080c43",
-    "d9a4dfbc6a26909b08c638a0640b6d06"
+    "d9a4dfbc6a26909b08c638a0640b6d06",
+    "5c93583e5a80077f38c4dd1c8fc4a860"
   ],
   "stats": {
-    "total_sent": 63,
+    "total_sent": 64,
     "total_failed": 2
   }
 }
