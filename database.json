@@ -383,6 +383,12 @@
       "mode": "Concurrency Nightmare",
       "date": "2026-06-17T16:40:39.202530+00:00",
       "content_hash": "6bdf645b6b6d86d95a750f1dc83a3442"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Long-Lived Connections\" في كودك بتاع الـ \"Network Servers\"؟",
+      "mode": "Myth Busting",
+      "date": "2026-06-17T20:20:42.746262+00:00",
+      "content_hash": "c828608e65fb877dfad63d394371ee7f"
     }
   ],
   "topic_hashes": [
@@ -449,10 +455,11 @@
     "61a3fb27060c7a46d160e44efd3d246f",
     "05fb03cdf46e8346ea62a130c7080c43",
     "d9a4dfbc6a26909b08c638a0640b6d06",
-    "5c93583e5a80077f38c4dd1c8fc4a860"
+    "5c93583e5a80077f38c4dd1c8fc4a860",
+    "bbaba1f0d5b2047f94ca702c9a130d05"
   ],
   "stats": {
-    "total_sent": 64,
+    "total_sent": 65,
     "total_failed": 2
   }
 }
