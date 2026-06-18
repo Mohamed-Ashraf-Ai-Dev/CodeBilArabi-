@@ -389,6 +389,12 @@
       "mode": "Myth Busting",
       "date": "2026-06-17T20:20:42.746262+00:00",
       "content_hash": "c828608e65fb877dfad63d394371ee7f"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Connection Pooling\" في تطبيقاتك بتاعة الـ \"Database-Driven\"؟",
+      "mode": "Code Review Roast",
+      "date": "2026-06-18T16:37:23.790863+00:00",
+      "content_hash": "983301e411b206910ba06c3efe4303b3"
     }
   ],
   "topic_hashes": [
@@ -456,10 +462,11 @@
     "05fb03cdf46e8346ea62a130c7080c43",
     "d9a4dfbc6a26909b08c638a0640b6d06",
     "5c93583e5a80077f38c4dd1c8fc4a860",
-    "bbaba1f0d5b2047f94ca702c9a130d05"
+    "bbaba1f0d5b2047f94ca702c9a130d05",
+    "53eb29db882f439de6c90f7cdecfb9ec"
   ],
   "stats": {
-    "total_sent": 65,
+    "total_sent": 66,
     "total_failed": 2
   }
 }
