@@ -395,6 +395,12 @@
       "mode": "Code Review Roast",
       "date": "2026-06-18T16:37:23.790863+00:00",
       "content_hash": "983301e411b206910ba06c3efe4303b3"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Circular Dependencies\" في نظامك بتاع الـ \"Cloud Native\"؟",
+      "mode": "Myth Busting",
+      "date": "2026-06-18T20:31:46.033774+00:00",
+      "content_hash": "b376bf9a5afaa5ecbb3147ace13b6480"
     }
   ],
   "topic_hashes": [
@@ -463,10 +469,11 @@
     "d9a4dfbc6a26909b08c638a0640b6d06",
     "5c93583e5a80077f38c4dd1c8fc4a860",
     "bbaba1f0d5b2047f94ca702c9a130d05",
-    "53eb29db882f439de6c90f7cdecfb9ec"
+    "53eb29db882f439de6c90f7cdecfb9ec",
+    "aaca0680aeed56abef9d9458697a017c"
   ],
   "stats": {
-    "total_sent": 66,
+    "total_sent": 67,
     "total_failed": 2
   }
 }
