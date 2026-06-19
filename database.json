@@ -407,6 +407,12 @@
       "mode": "War Story",
       "date": "2026-06-19T16:09:47.608334+00:00",
       "content_hash": "3e6b351cfaf257c438fb4f51e7cc463a"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Resource Exhaustion\" في النظم الموزعة بتاعتك؟",
+      "mode": "Failure Analysis",
+      "date": "2026-06-19T19:54:59.358933+00:00",
+      "content_hash": "9cbd9d730e5f1d7fd22385c49b5b5beb"
     }
   ],
   "topic_hashes": [
@@ -477,10 +483,11 @@
     "bbaba1f0d5b2047f94ca702c9a130d05",
     "53eb29db882f439de6c90f7cdecfb9ec",
     "aaca0680aeed56abef9d9458697a017c",
-    "57fc364f7a95f07ec011e719b54f146e"
+    "57fc364f7a95f07ec011e719b54f146e",
+    "29870e10f225b9f2a516bcf18a1188af"
   ],
   "stats": {
-    "total_sent": 68,
+    "total_sent": 69,
     "total_failed": 2
   }
 }
