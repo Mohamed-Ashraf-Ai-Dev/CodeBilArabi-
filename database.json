@@ -419,6 +419,12 @@
       "mode": "Myth Busting",
       "date": "2026-06-20T15:05:06.266257+00:00",
       "content_hash": "71f1ff835a45fc0e583415aca98e64e3"
+    },
+    {
+      "title": "العنوان: ازاي تتغلب على مشكلة الـ \"Livelock\" في كودك بتاع الـ \"Real-Time Systems\"؟",
+      "mode": "Concurrency Nightmare",
+      "date": "2026-06-20T19:44:00.145308+00:00",
+      "content_hash": "dba2fae2363b48665f9dd3c5cabb48d4"
     }
   ],
   "topic_hashes": [
@@ -491,10 +497,11 @@
     "aaca0680aeed56abef9d9458697a017c",
     "57fc364f7a95f07ec011e719b54f146e",
     "29870e10f225b9f2a516bcf18a1188af",
-    "df2be90f251e1aca7e9100fc34f9fd4a"
+    "df2be90f251e1aca7e9100fc34f9fd4a",
+    "c64781ac38a3d7308ba9a58ff960c9a3"
   ],
   "stats": {
-    "total_sent": 70,
+    "total_sent": 71,
     "total_failed": 2
   }
 }
