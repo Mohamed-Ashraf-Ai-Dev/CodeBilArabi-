@@ -413,6 +413,12 @@
       "mode": "Failure Analysis",
       "date": "2026-06-19T19:54:59.358933+00:00",
       "content_hash": "9cbd9d730e5f1d7fd22385c49b5b5beb"
+    },
+    {
+      "title": "العنوان: ازاي تمنع الـ \"Deadlock\" في كودك بتاع الـ \"Multithreading\"؟",
+      "mode": "Myth Busting",
+      "date": "2026-06-20T15:05:06.266257+00:00",
+      "content_hash": "71f1ff835a45fc0e583415aca98e64e3"
     }
   ],
   "topic_hashes": [
@@ -484,10 +490,11 @@
     "53eb29db882f439de6c90f7cdecfb9ec",
     "aaca0680aeed56abef9d9458697a017c",
     "57fc364f7a95f07ec011e719b54f146e",
-    "29870e10f225b9f2a516bcf18a1188af"
+    "29870e10f225b9f2a516bcf18a1188af",
+    "df2be90f251e1aca7e9100fc34f9fd4a"
   ],
   "stats": {
-    "total_sent": 69,
+    "total_sent": 70,
     "total_failed": 2
   }
 }
