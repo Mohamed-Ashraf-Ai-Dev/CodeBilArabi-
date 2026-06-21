@@ -431,6 +431,12 @@
       "mode": "Concurrency Nightmare",
       "date": "2026-06-21T15:12:32.891595+00:00",
       "content_hash": "a7111117d6923fa2ecee583dea831912"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Side Channel Attacks\" في نظامك بتاع الـ \"Cloud Computing\"؟",
+      "mode": "Security Research",
+      "date": "2026-06-21T19:50:30.972262+00:00",
+      "content_hash": "6443bdd93c0a2601623766748ada6179"
     }
   ],
   "topic_hashes": [
@@ -505,10 +511,11 @@
     "29870e10f225b9f2a516bcf18a1188af",
     "df2be90f251e1aca7e9100fc34f9fd4a",
     "c64781ac38a3d7308ba9a58ff960c9a3",
-    "31316a1edd39d3056e0b24e4f86c734a"
+    "31316a1edd39d3056e0b24e4f86c734a",
+    "8f8cc5678db107c58ade476b9682c73e"
   ],
   "stats": {
-    "total_sent": 72,
+    "total_sent": 73,
     "total_failed": 2
   }
 }
