@@ -437,6 +437,12 @@
       "mode": "Security Research",
       "date": "2026-06-21T19:50:30.972262+00:00",
       "content_hash": "6443bdd93c0a2601623766748ada6179"
+    },
+    {
+      "title": "العنوان: ازاي تتحكم في الـ \"Synchronization Primitives\" في نظامك بتاع الـ \"Real-Time Systems\"؟",
+      "mode": "Low-Level Internals",
+      "date": "2026-06-22T17:41:53.802502+00:00",
+      "content_hash": "897f502859b13ca179df23099d518280"
     }
   ],
   "topic_hashes": [
@@ -512,10 +518,11 @@
     "df2be90f251e1aca7e9100fc34f9fd4a",
     "c64781ac38a3d7308ba9a58ff960c9a3",
     "31316a1edd39d3056e0b24e4f86c734a",
-    "8f8cc5678db107c58ade476b9682c73e"
+    "8f8cc5678db107c58ade476b9682c73e",
+    "cb51f62ba52d846c773d6f1daa5c96b4"
   ],
   "stats": {
-    "total_sent": 73,
+    "total_sent": 74,
     "total_failed": 2
   }
 }
