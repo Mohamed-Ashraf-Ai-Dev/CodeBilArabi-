@@ -449,6 +449,12 @@
       "mode": "Low-Level Internals",
       "date": "2026-06-22T20:54:22.812446+00:00",
       "content_hash": "f3ba3fa7f3f298a69e0290e9480adfa9"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Cache Thrashing\" في نظامك بتاع الـ \"High-Performance Computing\"؟",
+      "mode": "Performance Crime",
+      "date": "2026-06-23T15:54:36.599150+00:00",
+      "content_hash": "47513ef675cc568e11dd3fe05f040ab8"
     }
   ],
   "topic_hashes": [
@@ -526,10 +532,11 @@
     "31316a1edd39d3056e0b24e4f86c734a",
     "8f8cc5678db107c58ade476b9682c73e",
     "cb51f62ba52d846c773d6f1daa5c96b4",
-    "e455c58e0de952e43a6fa64c47735556"
+    "e455c58e0de952e43a6fa64c47735556",
+    "82191adac6121e0e11df02a3088d003a"
   ],
   "stats": {
-    "total_sent": 75,
+    "total_sent": 76,
     "total_failed": 2
   }
 }
