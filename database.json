@@ -467,6 +467,12 @@
       "mode": "Database War",
       "date": "2026-06-24T15:35:25.219466+00:00",
       "content_hash": "414ffb886a9b95348834e87b1a6eb1e6"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Race Condition\" في كودك بتاع الـ \"Concurrent Programming\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-06-24T19:52:42.683545+00:00",
+      "content_hash": "17ff246e34fe9e17e1f115fc22f78a6d"
     }
   ],
   "topic_hashes": [
@@ -547,10 +553,11 @@
     "e455c58e0de952e43a6fa64c47735556",
     "82191adac6121e0e11df02a3088d003a",
     "4bcc73805912d1cdf0bcad9b9d4de8fa",
-    "6cc4393b14fbb63d36f772913dfa89e2"
+    "6cc4393b14fbb63d36f772913dfa89e2",
+    "53b4cbfab92de2e690b8675529c0b1c1"
   ],
   "stats": {
-    "total_sent": 78,
+    "total_sent": 79,
     "total_failed": 2
   }
 }
