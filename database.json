@@ -473,6 +473,12 @@
       "mode": "Failure Analysis",
       "date": "2026-06-24T19:52:42.683545+00:00",
       "content_hash": "17ff246e34fe9e17e1f115fc22f78a6d"
+    },
+    {
+      "title": "العنوان: ازاي تتحكم في الـ \"Context Switching\" في نظامك بتاع الـ \"Real-Time Systems\"؟",
+      "mode": "Low-Level Internals",
+      "date": "2026-06-25T15:43:11.425810+00:00",
+      "content_hash": "79166c058a5a7d4c8b6ae3d278a1286a"
     }
   ],
   "topic_hashes": [
@@ -554,10 +560,11 @@
     "82191adac6121e0e11df02a3088d003a",
     "4bcc73805912d1cdf0bcad9b9d4de8fa",
     "6cc4393b14fbb63d36f772913dfa89e2",
-    "53b4cbfab92de2e690b8675529c0b1c1"
+    "53b4cbfab92de2e690b8675529c0b1c1",
+    "fde96d1021b0cdcff5df63b7fbe607b9"
   ],
   "stats": {
-    "total_sent": 79,
+    "total_sent": 80,
     "total_failed": 2
   }
 }
