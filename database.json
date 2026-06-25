@@ -479,6 +479,12 @@
       "mode": "Low-Level Internals",
       "date": "2026-06-25T15:43:11.425810+00:00",
       "content_hash": "79166c058a5a7d4c8b6ae3d278a1286a"
+    },
+    {
+      "title": "العنوان: ازاي تتحكم في الـ \"Socket Exhaustion\" في تطبيقاتك بتاعة الـ \"Network Servers\"؟",
+      "mode": "DevOps Horror",
+      "date": "2026-06-25T20:07:18.837932+00:00",
+      "content_hash": "aeac8162e744d326d2a600a9c0c0a750"
     }
   ],
   "topic_hashes": [
@@ -561,10 +567,11 @@
     "4bcc73805912d1cdf0bcad9b9d4de8fa",
     "6cc4393b14fbb63d36f772913dfa89e2",
     "53b4cbfab92de2e690b8675529c0b1c1",
-    "fde96d1021b0cdcff5df63b7fbe607b9"
+    "fde96d1021b0cdcff5df63b7fbe607b9",
+    "d45738e0fb11501a5ffeb4158be09763"
   ],
   "stats": {
-    "total_sent": 80,
+    "total_sent": 81,
     "total_failed": 2
   }
 }
