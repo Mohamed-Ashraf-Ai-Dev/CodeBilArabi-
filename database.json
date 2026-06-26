@@ -491,6 +491,12 @@
       "mode": "Code Review Roast",
       "date": "2026-06-26T15:26:11.942248+00:00",
       "content_hash": "5b73d18f852648f30d57d2fac74a584a"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"TOCTOU\" في نظامك بتاع الـ \"File System\"؟",
+      "mode": "Security Research",
+      "date": "2026-06-26T19:57:15.297134+00:00",
+      "content_hash": "d48e43f65ecdc8342d2b8cbeb68281b9"
     }
   ],
   "topic_hashes": [
@@ -575,10 +581,11 @@
     "53b4cbfab92de2e690b8675529c0b1c1",
     "fde96d1021b0cdcff5df63b7fbe607b9",
     "d45738e0fb11501a5ffeb4158be09763",
-    "5813f1c68dfc45ab1173829f8875a032"
+    "5813f1c68dfc45ab1173829f8875a032",
+    "972b32689b2aef79446b2286e9f60698"
   ],
   "stats": {
-    "total_sent": 82,
+    "total_sent": 83,
     "total_failed": 2
   }
 }
