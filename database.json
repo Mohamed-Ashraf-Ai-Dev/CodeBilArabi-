@@ -485,6 +485,12 @@
       "mode": "DevOps Horror",
       "date": "2026-06-25T20:07:18.837932+00:00",
       "content_hash": "aeac8162e744d326d2a600a9c0c0a750"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Memory Leaks\" في تطبيقاتك بتاعة الـ \"Native Code\"؟",
+      "mode": "Code Review Roast",
+      "date": "2026-06-26T15:26:11.942248+00:00",
+      "content_hash": "5b73d18f852648f30d57d2fac74a584a"
     }
   ],
   "topic_hashes": [
@@ -568,10 +574,11 @@
     "6cc4393b14fbb63d36f772913dfa89e2",
     "53b4cbfab92de2e690b8675529c0b1c1",
     "fde96d1021b0cdcff5df63b7fbe607b9",
-    "d45738e0fb11501a5ffeb4158be09763"
+    "d45738e0fb11501a5ffeb4158be09763",
+    "5813f1c68dfc45ab1173829f8875a032"
   ],
   "stats": {
-    "total_sent": 81,
+    "total_sent": 82,
     "total_failed": 2
   }
 }
