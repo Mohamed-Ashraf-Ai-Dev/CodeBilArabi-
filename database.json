@@ -509,6 +509,12 @@
       "mode": "Myth Busting",
       "date": "2026-06-27T19:27:55.296347+00:00",
       "content_hash": "e6e2d3629c8e37c7a31ef9e422d9cc65"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Partial Failure\" في النظم الموزعة بتاعتك عشان تتحسن الـ system reliability؟",
+      "mode": "Distributed Systems Chaos",
+      "date": "2026-06-28T14:50:35.697900+00:00",
+      "content_hash": "6bbe5e0bb8665ac934a324add115e91e"
     }
   ],
   "topic_hashes": [
@@ -596,10 +602,11 @@
     "5813f1c68dfc45ab1173829f8875a032",
     "972b32689b2aef79446b2286e9f60698",
     "576b3806666d387292416e9ab05029d7",
-    "97262fbae333af6e23a7350649b90aaa"
+    "97262fbae333af6e23a7350649b90aaa",
+    "ea6de1b32cedfe980c19d69638d08f1e"
   ],
   "stats": {
-    "total_sent": 85,
+    "total_sent": 86,
     "total_failed": 2
   }
 }
