@@ -515,6 +515,12 @@
       "mode": "Distributed Systems Chaos",
       "date": "2026-06-28T14:50:35.697900+00:00",
       "content_hash": "6bbe5e0bb8665ac934a324add115e91e"
+    },
+    {
+      "title": "العنوان: ازاي تمنع الـ \"Starvation\" في نظامك بتاع الـ \"Multithreading\"؟",
+      "mode": "Myth Busting",
+      "date": "2026-06-28T19:36:45.521614+00:00",
+      "content_hash": "24ed4ee03c88905a37d3692737095440"
     }
   ],
   "topic_hashes": [
@@ -603,10 +609,11 @@
     "972b32689b2aef79446b2286e9f60698",
     "576b3806666d387292416e9ab05029d7",
     "97262fbae333af6e23a7350649b90aaa",
-    "ea6de1b32cedfe980c19d69638d08f1e"
+    "ea6de1b32cedfe980c19d69638d08f1e",
+    "40c6ed2f7310e99ccd5ac8ca1d42f4d1"
   ],
   "stats": {
-    "total_sent": 86,
+    "total_sent": 87,
     "total_failed": 2
   }
 }
