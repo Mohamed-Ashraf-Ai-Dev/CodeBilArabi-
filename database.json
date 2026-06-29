@@ -527,6 +527,12 @@
       "mode": "Distributed Systems Chaos",
       "date": "2026-06-29T16:39:51.487887+00:00",
       "content_hash": "10718764b30a5ebd20230a2f0f4fb286"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"False Sharing\" في نظامك بتاع الـ \"Multicore Processing\"؟",
+      "mode": "Performance Crime",
+      "date": "2026-06-29T20:05:28.973536+00:00",
+      "content_hash": "1fb7a4fc206a0a744ab783d9d4d8f0bb"
     }
   ],
   "topic_hashes": [
@@ -617,10 +623,11 @@
     "97262fbae333af6e23a7350649b90aaa",
     "ea6de1b32cedfe980c19d69638d08f1e",
     "40c6ed2f7310e99ccd5ac8ca1d42f4d1",
-    "8a15b54efc12a8b5fe0347525eac49a5"
+    "8a15b54efc12a8b5fe0347525eac49a5",
+    "ff6e48e919a0c87fd185cc0dcce34dee"
   ],
   "stats": {
-    "total_sent": 88,
+    "total_sent": 89,
     "total_failed": 2
   }
 }
