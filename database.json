@@ -521,6 +521,12 @@
       "mode": "Myth Busting",
       "date": "2026-06-28T19:36:45.521614+00:00",
       "content_hash": "24ed4ee03c88905a37d3692737095440"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Split Brain\" في نظامك بتاع الـ \"Distributed Database\"؟",
+      "mode": "Distributed Systems Chaos",
+      "date": "2026-06-29T16:39:51.487887+00:00",
+      "content_hash": "10718764b30a5ebd20230a2f0f4fb286"
     }
   ],
   "topic_hashes": [
@@ -610,10 +616,11 @@
     "576b3806666d387292416e9ab05029d7",
     "97262fbae333af6e23a7350649b90aaa",
     "ea6de1b32cedfe980c19d69638d08f1e",
-    "40c6ed2f7310e99ccd5ac8ca1d42f4d1"
+    "40c6ed2f7310e99ccd5ac8ca1d42f4d1",
+    "8a15b54efc12a8b5fe0347525eac49a5"
   ],
   "stats": {
-    "total_sent": 87,
+    "total_sent": 88,
     "total_failed": 2
   }
 }
