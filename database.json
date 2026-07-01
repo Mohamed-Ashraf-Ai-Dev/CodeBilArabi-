@@ -545,6 +545,12 @@
       "mode": "Myth Busting",
       "date": "2026-06-30T20:04:51.763882+00:00",
       "content_hash": "281a486f9ec5ac78968ece9db8107e05"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Thread Pool Exhaustion\" في نظامك بتاع الـ \"High-Performance Computing\"؟",
+      "mode": "DevOps Horror",
+      "date": "2026-07-01T15:46:18.102987+00:00",
+      "content_hash": "45332494aa1a37db3bdb6516a71aecb0"
     }
   ],
   "topic_hashes": [
@@ -638,10 +644,11 @@
     "8a15b54efc12a8b5fe0347525eac49a5",
     "ff6e48e919a0c87fd185cc0dcce34dee",
     "ddec0d361dce7489fe76aca19cfc72f1",
-    "5527bf3710396e866e4f4ccdc012ee48"
+    "5527bf3710396e866e4f4ccdc012ee48",
+    "53e97f8fa647a380ba04248c4b56f441"
   ],
   "stats": {
-    "total_sent": 91,
+    "total_sent": 92,
     "total_failed": 2
   }
 }
