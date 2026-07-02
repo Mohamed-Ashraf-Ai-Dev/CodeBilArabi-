@@ -557,6 +557,12 @@
       "mode": "Elite Arena",
       "date": "2026-07-01T20:02:44.574452+00:00",
       "content_hash": "ce8b245dae14360785fada6fb17b09e9"
+    },
+    {
+      "title": "العنوان: ازاي تتغلب على مشكلة الـ \"Circular Dependency\" في نظامك بتاع الـ \"Complex Software Systems\"؟",
+      "mode": "DevOps Horror",
+      "date": "2026-07-02T15:20:36.230170+00:00",
+      "content_hash": "d0fd9ed8532748419eb09a5b427e06f3"
     }
   ],
   "topic_hashes": [
@@ -652,10 +658,11 @@
     "ddec0d361dce7489fe76aca19cfc72f1",
     "5527bf3710396e866e4f4ccdc012ee48",
     "53e97f8fa647a380ba04248c4b56f441",
-    "ec9bd42a2440d6a93d1ebf8542887900"
+    "ec9bd42a2440d6a93d1ebf8542887900",
+    "032ff7a3d5ee8c50541ce189b0565292"
   ],
   "stats": {
-    "total_sent": 93,
+    "total_sent": 94,
     "total_failed": 2
   }
 }
