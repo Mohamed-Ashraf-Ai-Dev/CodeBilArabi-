@@ -575,6 +575,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-03T15:14:15.884951+00:00",
       "content_hash": "4eab3e247d09b6eaa7c324ff98f5160c"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Cache Coherence\" في نظم الـ \"Multicore Processing\"؟",
+      "mode": "Elite Arena",
+      "date": "2026-07-03T19:36:33.097071+00:00",
+      "content_hash": "959b6a589f31b6bc3dfc2269988c8599"
     }
   ],
   "topic_hashes": [
@@ -673,10 +679,11 @@
     "ec9bd42a2440d6a93d1ebf8542887900",
     "032ff7a3d5ee8c50541ce189b0565292",
     "04ff0155f42f4ee6eb9441d765d25d9e",
-    "53e5b56aed261d0f7b0d0e0c1b194e03"
+    "53e5b56aed261d0f7b0d0e0c1b194e03",
+    "1f60cb2ed460818d45f5e7819392f0b0"
   ],
   "stats": {
-    "total_sent": 96,
+    "total_sent": 97,
     "total_failed": 2
   }
 }
