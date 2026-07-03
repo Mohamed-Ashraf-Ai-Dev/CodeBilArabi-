@@ -569,6 +569,12 @@
       "mode": "Elite Arena",
       "date": "2026-07-02T19:38:26.068618+00:00",
       "content_hash": "d7c159fae03e918eb554df3c2208582f"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Synchronization Overhead\" في نظامك بتاع الـ \"Multithreading\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-03T15:14:15.884951+00:00",
+      "content_hash": "4eab3e247d09b6eaa7c324ff98f5160c"
     }
   ],
   "topic_hashes": [
@@ -666,10 +672,11 @@
     "53e97f8fa647a380ba04248c4b56f441",
     "ec9bd42a2440d6a93d1ebf8542887900",
     "032ff7a3d5ee8c50541ce189b0565292",
-    "04ff0155f42f4ee6eb9441d765d25d9e"
+    "04ff0155f42f4ee6eb9441d765d25d9e",
+    "53e5b56aed261d0f7b0d0e0c1b194e03"
   ],
   "stats": {
-    "total_sent": 95,
+    "total_sent": 96,
     "total_failed": 2
   }
 }
