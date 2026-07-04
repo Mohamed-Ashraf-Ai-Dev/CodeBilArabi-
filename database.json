@@ -587,6 +587,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-04T14:41:07.206314+00:00",
       "content_hash": "8f403ce56fadb0ddc4ed18048d9547a0"
+    },
+    {
+      "title": "العنوان: ازاي تتغلب على مشكلة الـ \"Cold Start\" في تطبيقاتك بتاعة الـ \"Serverless Computing\"？",
+      "mode": "Myth Busting",
+      "date": "2026-07-04T19:21:19.090992+00:00",
+      "content_hash": "15575a3375c141d282520d83d8820039"
     }
   ],
   "topic_hashes": [
@@ -687,10 +693,11 @@
     "04ff0155f42f4ee6eb9441d765d25d9e",
     "53e5b56aed261d0f7b0d0e0c1b194e03",
     "1f60cb2ed460818d45f5e7819392f0b0",
-    "84b24aad76a1c32cbb8f0ec2e66c0579"
+    "84b24aad76a1c32cbb8f0ec2e66c0579",
+    "e237a3997bc135fdaf8a5c9d3b83c6c2"
   ],
   "stats": {
-    "total_sent": 98,
+    "total_sent": 99,
     "total_failed": 2
   }
 }
