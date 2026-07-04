@@ -581,6 +581,12 @@
       "mode": "Elite Arena",
       "date": "2026-07-03T19:36:33.097071+00:00",
       "content_hash": "959b6a589f31b6bc3dfc2269988c8599"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Resource Starvation\" في أنظمة الـ \"Cloud Native Applications\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-04T14:41:07.206314+00:00",
+      "content_hash": "8f403ce56fadb0ddc4ed18048d9547a0"
     }
   ],
   "topic_hashes": [
@@ -680,10 +686,11 @@
     "032ff7a3d5ee8c50541ce189b0565292",
     "04ff0155f42f4ee6eb9441d765d25d9e",
     "53e5b56aed261d0f7b0d0e0c1b194e03",
-    "1f60cb2ed460818d45f5e7819392f0b0"
+    "1f60cb2ed460818d45f5e7819392f0b0",
+    "84b24aad76a1c32cbb8f0ec2e66c0579"
   ],
   "stats": {
-    "total_sent": 97,
+    "total_sent": 98,
     "total_failed": 2
   }
 }
