@@ -593,6 +593,12 @@
       "mode": "Myth Busting",
       "date": "2026-07-04T19:21:19.090992+00:00",
       "content_hash": "15575a3375c141d282520d83d8820039"
+    },
+    {
+      "title": "ازاي تتعامل مع مشكلة الـ \"Database Connection Pooling\" في نظامك بتاع الـ \"High-Traffic Web Applications\"؟",
+      "mode": "Database War",
+      "date": "2026-07-05T14:47:38.093122+00:00",
+      "content_hash": "3b2a49c18c4881cdff0b5491c546196b"
     }
   ],
   "topic_hashes": [
@@ -694,10 +700,11 @@
     "53e5b56aed261d0f7b0d0e0c1b194e03",
     "1f60cb2ed460818d45f5e7819392f0b0",
     "84b24aad76a1c32cbb8f0ec2e66c0579",
-    "e237a3997bc135fdaf8a5c9d3b83c6c2"
+    "e237a3997bc135fdaf8a5c9d3b83c6c2",
+    "656791c967244e46ae2122f7d6c3d7c1"
   ],
   "stats": {
-    "total_sent": 99,
+    "total_sent": 100,
     "total_failed": 2
   }
 }
