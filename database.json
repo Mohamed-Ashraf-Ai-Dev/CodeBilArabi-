@@ -605,6 +605,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-05T19:24:55.783935+00:00",
       "content_hash": "ba1b82ce1eae0d3840f5443f8cc77d36"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Network Partition\" في أنظمة الـ \"Distributed Databases\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-06T16:24:52.858154+00:00",
+      "content_hash": "375d54150edd6b87a7d017a913fd4e4e"
     }
   ],
   "topic_hashes": [
@@ -708,10 +714,11 @@
     "84b24aad76a1c32cbb8f0ec2e66c0579",
     "e237a3997bc135fdaf8a5c9d3b83c6c2",
     "656791c967244e46ae2122f7d6c3d7c1",
-    "7a9121b425c646c038116b618c8072df"
+    "7a9121b425c646c038116b618c8072df",
+    "fc084fc08960abda920392dfa7b354c1"
   ],
   "stats": {
-    "total_sent": 101,
+    "total_sent": 102,
     "total_failed": 2
   }
 }
