@@ -611,6 +611,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-06T16:24:52.858154+00:00",
       "content_hash": "375d54150edd6b87a7d017a913fd4e4e"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Page Fault\" في نظامك بتاع الـ \"Virtual Memory\"؟",
+      "mode": "Low-Level Internals",
+      "date": "2026-07-06T20:04:30.656438+00:00",
+      "content_hash": "60d1b8cef7921393fb614c729a85eba2"
     }
   ],
   "topic_hashes": [
@@ -715,10 +721,11 @@
     "e237a3997bc135fdaf8a5c9d3b83c6c2",
     "656791c967244e46ae2122f7d6c3d7c1",
     "7a9121b425c646c038116b618c8072df",
-    "fc084fc08960abda920392dfa7b354c1"
+    "fc084fc08960abda920392dfa7b354c1",
+    "4b5bdae7185e29213f2cf50956ed25a6"
   ],
   "stats": {
-    "total_sent": 102,
+    "total_sent": 103,
     "total_failed": 2
   }
 }
