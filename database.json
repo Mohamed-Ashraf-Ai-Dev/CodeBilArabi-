@@ -623,6 +623,12 @@
       "mode": "Concurrency Nightmare",
       "date": "2026-07-07T15:45:12.958938+00:00",
       "content_hash": "d938b53ab66b985e9ff49f3a5135607b"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع الـ \"Memory Leak\" في تطبيقاتك بتاعة الـ \"Cloud Native Applications\"？",
+      "mode": "DevOps Horror",
+      "date": "2026-07-07T20:02:46.134959+00:00",
+      "content_hash": "fb4a6e858638369a2098589e87a64e95"
     }
   ],
   "topic_hashes": [
@@ -729,10 +735,11 @@
     "7a9121b425c646c038116b618c8072df",
     "fc084fc08960abda920392dfa7b354c1",
     "4b5bdae7185e29213f2cf50956ed25a6",
-    "6894e34510d3f842285cff35ab4186cb"
+    "6894e34510d3f842285cff35ab4186cb",
+    "e78e25859e39288c5539c32e7c7ef731"
   ],
   "stats": {
-    "total_sent": 104,
+    "total_sent": 105,
     "total_failed": 2
   }
 }
