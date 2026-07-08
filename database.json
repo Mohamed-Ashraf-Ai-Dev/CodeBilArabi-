@@ -629,6 +629,12 @@
       "mode": "DevOps Horror",
       "date": "2026-07-07T20:02:46.134959+00:00",
       "content_hash": "fb4a6e858638369a2098589e87a64e95"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Fault Tolerance\" في نظامك بتاع الـ \"Distributed Systems\"؟",
+      "mode": "DevOps Horror",
+      "date": "2026-07-08T15:25:06.502721+00:00",
+      "content_hash": "c231f7d658ea5c81df0621bfd443b204"
     }
   ],
   "topic_hashes": [
@@ -736,10 +742,11 @@
     "fc084fc08960abda920392dfa7b354c1",
     "4b5bdae7185e29213f2cf50956ed25a6",
     "6894e34510d3f842285cff35ab4186cb",
-    "e78e25859e39288c5539c32e7c7ef731"
+    "e78e25859e39288c5539c32e7c7ef731",
+    "ead02543adbe2bb4ef228cb4057f5920"
   ],
   "stats": {
-    "total_sent": 105,
+    "total_sent": 106,
     "total_failed": 2
   }
 }
