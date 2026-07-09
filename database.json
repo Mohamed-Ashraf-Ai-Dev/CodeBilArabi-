@@ -647,6 +647,12 @@
       "mode": "Architecture Breakdown",
       "date": "2026-07-09T16:01:43.197169+00:00",
       "content_hash": "95d9d31ac0d8fc6acdbe05b836ee839b"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Mutex Contention\" في نظامك بتاع الـ \"High-Performance Computing\"؟",
+      "mode": "War Story",
+      "date": "2026-07-09T19:52:38.939741+00:00",
+      "content_hash": "c81565507cb72c30cce732cec08dcca5"
     }
   ],
   "topic_hashes": [
@@ -757,10 +763,11 @@
     "e78e25859e39288c5539c32e7c7ef731",
     "ead02543adbe2bb4ef228cb4057f5920",
     "1737a2041f0427eb2db471ea0e61af79",
-    "144144893363dd324c19d9dfb3554f8e"
+    "144144893363dd324c19d9dfb3554f8e",
+    "d1313aa5edf0243955d1cc9cb222c798"
   ],
   "stats": {
-    "total_sent": 108,
+    "total_sent": 109,
     "total_failed": 2
   }
 }
