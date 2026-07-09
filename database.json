@@ -641,6 +641,12 @@
       "mode": "Myth Busting",
       "date": "2026-07-08T19:40:03.485913+00:00",
       "content_hash": "2e889c5469c038cb27476d9146ba4499"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Long-Running Transactions\" في أنظمة الـ \"Distributed Databases\"؟",
+      "mode": "Architecture Breakdown",
+      "date": "2026-07-09T16:01:43.197169+00:00",
+      "content_hash": "95d9d31ac0d8fc6acdbe05b836ee839b"
     }
   ],
   "topic_hashes": [
@@ -750,10 +756,11 @@
     "6894e34510d3f842285cff35ab4186cb",
     "e78e25859e39288c5539c32e7c7ef731",
     "ead02543adbe2bb4ef228cb4057f5920",
-    "1737a2041f0427eb2db471ea0e61af79"
+    "1737a2041f0427eb2db471ea0e61af79",
+    "144144893363dd324c19d9dfb3554f8e"
   ],
   "stats": {
-    "total_sent": 107,
+    "total_sent": 108,
     "total_failed": 2
   }
 }
