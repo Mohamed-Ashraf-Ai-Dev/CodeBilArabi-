@@ -653,6 +653,12 @@
       "mode": "War Story",
       "date": "2026-07-09T19:52:38.939741+00:00",
       "content_hash": "c81565507cb72c30cce732cec08dcca5"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Heap Fragmentation\" في تطبيقاتك بتاعة الـ \"High-Performance Computing\"؟",
+      "mode": "Memory Management Deep Dive",
+      "date": "2026-07-10T15:34:31.084585+00:00",
+      "content_hash": "572ecda24c1425c0cddd8526dfd26ae9"
     }
   ],
   "topic_hashes": [
@@ -764,10 +770,11 @@
     "ead02543adbe2bb4ef228cb4057f5920",
     "1737a2041f0427eb2db471ea0e61af79",
     "144144893363dd324c19d9dfb3554f8e",
-    "d1313aa5edf0243955d1cc9cb222c798"
+    "d1313aa5edf0243955d1cc9cb222c798",
+    "8d99068870740385216654f64cc591db"
   ],
   "stats": {
-    "total_sent": 109,
+    "total_sent": 110,
     "total_failed": 2
   }
 }
