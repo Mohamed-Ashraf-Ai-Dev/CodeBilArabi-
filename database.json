@@ -659,6 +659,12 @@
       "mode": "Memory Management Deep Dive",
       "date": "2026-07-10T15:34:31.084585+00:00",
       "content_hash": "572ecda24c1425c0cddd8526dfd26ae9"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Disk Bottleneck\" في نظامك بتاع الـ \"High-Performance Databases\"؟",
+      "mode": "Database War",
+      "date": "2026-07-10T19:39:16.146584+00:00",
+      "content_hash": "1a9097c6ab98234f9941a939c49d57e3"
     }
   ],
   "topic_hashes": [
@@ -771,10 +777,11 @@
     "1737a2041f0427eb2db471ea0e61af79",
     "144144893363dd324c19d9dfb3554f8e",
     "d1313aa5edf0243955d1cc9cb222c798",
-    "8d99068870740385216654f64cc591db"
+    "8d99068870740385216654f64cc591db",
+    "ea872e52a1bc2357c304e322decad684"
   ],
   "stats": {
-    "total_sent": 110,
+    "total_sent": 111,
     "total_failed": 2
   }
 }
