@@ -671,6 +671,12 @@
       "mode": "Security Research",
       "date": "2026-07-11T14:23:48.183079+00:00",
       "content_hash": "43f8b7a396c769fd2587a9eb8c3282e1"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Deadlock\" في نظامك بتاع الـ \"Multithreading\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-11T19:10:55.202630+00:00",
+      "content_hash": "61467123ed15f3d73a824d612fc6c302"
     }
   ],
   "topic_hashes": [
@@ -785,10 +791,11 @@
     "d1313aa5edf0243955d1cc9cb222c798",
     "8d99068870740385216654f64cc591db",
     "ea872e52a1bc2357c304e322decad684",
-    "5dcf362d944f157b693540c18cf503d5"
+    "5dcf362d944f157b693540c18cf503d5",
+    "7a757a91c3b92ca983e1def3f73fd222"
   ],
   "stats": {
-    "total_sent": 112,
+    "total_sent": 113,
     "total_failed": 2
   }
 }
