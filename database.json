@@ -665,6 +665,12 @@
       "mode": "Database War",
       "date": "2026-07-10T19:39:16.146584+00:00",
       "content_hash": "1a9097c6ab98234f9941a939c49d57e3"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Side Channel Attack\" في أنظمة الـ \"Cloud Computing\"？",
+      "mode": "Security Research",
+      "date": "2026-07-11T14:23:48.183079+00:00",
+      "content_hash": "43f8b7a396c769fd2587a9eb8c3282e1"
     }
   ],
   "topic_hashes": [
@@ -778,10 +784,11 @@
     "144144893363dd324c19d9dfb3554f8e",
     "d1313aa5edf0243955d1cc9cb222c798",
     "8d99068870740385216654f64cc591db",
-    "ea872e52a1bc2357c304e322decad684"
+    "ea872e52a1bc2357c304e322decad684",
+    "5dcf362d944f157b693540c18cf503d5"
   ],
   "stats": {
-    "total_sent": 111,
+    "total_sent": 112,
     "total_failed": 2
   }
 }
