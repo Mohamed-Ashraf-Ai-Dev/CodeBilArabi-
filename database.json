@@ -683,6 +683,12 @@
       "mode": "Distributed Systems Chaos",
       "date": "2026-07-12T14:27:28.159289+00:00",
       "content_hash": "06546aaca51d0ef7fb8050e25b67a580"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Distributed Locks\" في أنظمة الـ \"Cloud Native Applications\"؟",
+      "mode": "Distributed Systems Chaos",
+      "date": "2026-07-12T19:11:39.809143+00:00",
+      "content_hash": "b112563fec6d9573eaadd0529de1a76a"
     }
   ],
   "topic_hashes": [
@@ -799,10 +805,11 @@
     "ea872e52a1bc2357c304e322decad684",
     "5dcf362d944f157b693540c18cf503d5",
     "7a757a91c3b92ca983e1def3f73fd222",
-    "e3f22e28cccfae14693a6139fc8144be"
+    "e3f22e28cccfae14693a6139fc8144be",
+    "7e4b317b3319008c52b653579dd65bc4"
   ],
   "stats": {
-    "total_sent": 114,
+    "total_sent": 115,
     "total_failed": 2
   }
 }
