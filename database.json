@@ -695,6 +695,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-13T15:44:05.340401+00:00",
       "content_hash": "a5379c9cd9ed8e3952250fcfa0d47273"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"File Descriptor Leak\" في نظامك بتاع الـ \"High-Performance Networking\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-13T19:29:17.446669+00:00",
+      "content_hash": "e08b250dacdcfc8236e05458ae1b9532"
     }
   ],
   "topic_hashes": [
@@ -813,10 +819,11 @@
     "7a757a91c3b92ca983e1def3f73fd222",
     "e3f22e28cccfae14693a6139fc8144be",
     "7e4b317b3319008c52b653579dd65bc4",
-    "53adaf83a88b83e1a32880004af93d7e"
+    "53adaf83a88b83e1a32880004af93d7e",
+    "605cf760353bfdc340d37952b08acfd4"
   ],
   "stats": {
-    "total_sent": 116,
+    "total_sent": 117,
     "total_failed": 2
   }
 }
