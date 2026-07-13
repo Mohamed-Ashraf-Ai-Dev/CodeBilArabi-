@@ -689,6 +689,12 @@
       "mode": "Distributed Systems Chaos",
       "date": "2026-07-12T19:11:39.809143+00:00",
       "content_hash": "b112563fec6d9573eaadd0529de1a76a"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Thread Pool Exhaustion\" في أنظمة الـ \"High-Throughput Applications\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-13T15:44:05.340401+00:00",
+      "content_hash": "a5379c9cd9ed8e3952250fcfa0d47273"
     }
   ],
   "topic_hashes": [
@@ -806,10 +812,11 @@
     "5dcf362d944f157b693540c18cf503d5",
     "7a757a91c3b92ca983e1def3f73fd222",
     "e3f22e28cccfae14693a6139fc8144be",
-    "7e4b317b3319008c52b653579dd65bc4"
+    "7e4b317b3319008c52b653579dd65bc4",
+    "53adaf83a88b83e1a32880004af93d7e"
   ],
   "stats": {
-    "total_sent": 115,
+    "total_sent": 116,
     "total_failed": 2
   }
 }
