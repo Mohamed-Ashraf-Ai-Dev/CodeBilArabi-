@@ -707,6 +707,12 @@
       "mode": "DevOps Horror",
       "date": "2026-07-14T14:56:55.357577+00:00",
       "content_hash": "798f5c41f21d7cc75c2671ef9c29e308"
+    },
+    {
+      "title": "العنوان: ازاي تتغلب على مشكلة الـ \"Resource Starvation\" في نظامك بتاع الـ \"Real-Time Systems\"؟",
+      "mode": "Myth Busting",
+      "date": "2026-07-14T19:26:28.855636+00:00",
+      "content_hash": "ad207b66cc12dc278b5437a3b1ad6f99"
     }
   ],
   "topic_hashes": [
@@ -827,10 +833,11 @@
     "7e4b317b3319008c52b653579dd65bc4",
     "53adaf83a88b83e1a32880004af93d7e",
     "605cf760353bfdc340d37952b08acfd4",
-    "8f7e471ce19858c257d5e9711a92f7fd"
+    "8f7e471ce19858c257d5e9711a92f7fd",
+    "b4916bf98bcf1aede77ac993437e09bc"
   ],
   "stats": {
-    "total_sent": 118,
+    "total_sent": 119,
     "total_failed": 2
   }
 }
