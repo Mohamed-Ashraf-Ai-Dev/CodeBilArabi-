@@ -701,6 +701,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-13T19:29:17.446669+00:00",
       "content_hash": "e08b250dacdcfc8236e05458ae1b9532"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"GC Pause\" في تطبيقاتك بتاعة الـ \"Low-Latency Systems\"؟",
+      "mode": "DevOps Horror",
+      "date": "2026-07-14T14:56:55.357577+00:00",
+      "content_hash": "798f5c41f21d7cc75c2671ef9c29e308"
     }
   ],
   "topic_hashes": [
@@ -820,10 +826,11 @@
     "e3f22e28cccfae14693a6139fc8144be",
     "7e4b317b3319008c52b653579dd65bc4",
     "53adaf83a88b83e1a32880004af93d7e",
-    "605cf760353bfdc340d37952b08acfd4"
+    "605cf760353bfdc340d37952b08acfd4",
+    "8f7e471ce19858c257d5e9711a92f7fd"
   ],
   "stats": {
-    "total_sent": 117,
+    "total_sent": 118,
     "total_failed": 2
   }
 }
