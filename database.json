@@ -713,6 +713,12 @@
       "mode": "Myth Busting",
       "date": "2026-07-14T19:26:28.855636+00:00",
       "content_hash": "ad207b66cc12dc278b5437a3b1ad6f99"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Cache Invalidation\" في نظامك بتاع الـ \"Distributed Caching\"؟",
+      "mode": "Architecture Breakdown",
+      "date": "2026-07-15T14:56:15.928430+00:00",
+      "content_hash": "f61886615472c797a2603bd163e42c72"
     }
   ],
   "topic_hashes": [
@@ -834,10 +840,11 @@
     "53adaf83a88b83e1a32880004af93d7e",
     "605cf760353bfdc340d37952b08acfd4",
     "8f7e471ce19858c257d5e9711a92f7fd",
-    "b4916bf98bcf1aede77ac993437e09bc"
+    "b4916bf98bcf1aede77ac993437e09bc",
+    "d6442290200c73d3d8fe50609807e9bd"
   ],
   "stats": {
-    "total_sent": 119,
+    "total_sent": 120,
     "total_failed": 2
   }
 }
