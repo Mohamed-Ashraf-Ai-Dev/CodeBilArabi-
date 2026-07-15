@@ -719,6 +719,12 @@
       "mode": "Architecture Breakdown",
       "date": "2026-07-15T14:56:15.928430+00:00",
       "content_hash": "f61886615472c797a2603bd163e42c72"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Lock Contention\" في نظامك بتاع الـ \"High-Performance Computing\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-15T19:18:20.729041+00:00",
+      "content_hash": "5da3ef7464889215a19e5a60103eba66"
     }
   ],
   "topic_hashes": [
@@ -841,10 +847,11 @@
     "605cf760353bfdc340d37952b08acfd4",
     "8f7e471ce19858c257d5e9711a92f7fd",
     "b4916bf98bcf1aede77ac993437e09bc",
-    "d6442290200c73d3d8fe50609807e9bd"
+    "d6442290200c73d3d8fe50609807e9bd",
+    "650b120955efe8088fbeaca901c351b5"
   ],
   "stats": {
-    "total_sent": 120,
+    "total_sent": 121,
     "total_failed": 2
   }
 }
