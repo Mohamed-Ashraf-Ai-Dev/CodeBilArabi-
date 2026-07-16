@@ -725,6 +725,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-15T19:18:20.729041+00:00",
       "content_hash": "5da3ef7464889215a19e5a60103eba66"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Resource Intensive Queries\" في نظامك بتاع الـ \"Relational Databases\"؟",
+      "mode": "War Story",
+      "date": "2026-07-16T15:06:36.783329+00:00",
+      "content_hash": "2e4590488710285ab24e6c8e29ed678d"
     }
   ],
   "topic_hashes": [
@@ -848,10 +854,11 @@
     "8f7e471ce19858c257d5e9711a92f7fd",
     "b4916bf98bcf1aede77ac993437e09bc",
     "d6442290200c73d3d8fe50609807e9bd",
-    "650b120955efe8088fbeaca901c351b5"
+    "650b120955efe8088fbeaca901c351b5",
+    "ab00334db68d01f668e890fbfb879ef6"
   ],
   "stats": {
-    "total_sent": 121,
+    "total_sent": 122,
     "total_failed": 2
   }
 }
