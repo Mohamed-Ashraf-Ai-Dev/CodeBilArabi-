@@ -737,6 +737,12 @@
       "mode": "Memory Management Deep Dive",
       "date": "2026-07-16T19:19:16.059618+00:00",
       "content_hash": "ca2b19637e9f77b3ab79413e9c4e80dc"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Synchronization\" في نظامك بتاع الـ \"Concurrent Programming\"؟",
+      "mode": "Elite Arena",
+      "date": "2026-07-17T14:46:39.324473+00:00",
+      "content_hash": "f16eedf3ae7c3802d54de9110dba2dc9"
     }
   ],
   "topic_hashes": [
@@ -862,10 +868,11 @@
     "d6442290200c73d3d8fe50609807e9bd",
     "650b120955efe8088fbeaca901c351b5",
     "ab00334db68d01f668e890fbfb879ef6",
-    "628613d3d9889e36cc1458b34d7f9087"
+    "628613d3d9889e36cc1458b34d7f9087",
+    "b9224940b11ed3b23b46df6206ee6c5d"
   ],
   "stats": {
-    "total_sent": 123,
+    "total_sent": 124,
     "total_failed": 2
   }
 }
