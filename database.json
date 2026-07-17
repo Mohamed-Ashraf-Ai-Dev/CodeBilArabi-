@@ -743,6 +743,12 @@
       "mode": "Elite Arena",
       "date": "2026-07-17T14:46:39.324473+00:00",
       "content_hash": "f16eedf3ae7c3802d54de9110dba2dc9"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"False Sharing\" في نظامك بتاع الـ \"Multithreading\"؟",
+      "mode": "Performance Crime",
+      "date": "2026-07-17T19:17:07.881009+00:00",
+      "content_hash": "b01be9c39b63efefb89652bbdbe42079"
     }
   ],
   "topic_hashes": [
@@ -869,10 +875,11 @@
     "650b120955efe8088fbeaca901c351b5",
     "ab00334db68d01f668e890fbfb879ef6",
     "628613d3d9889e36cc1458b34d7f9087",
-    "b9224940b11ed3b23b46df6206ee6c5d"
+    "b9224940b11ed3b23b46df6206ee6c5d",
+    "f5cabaa0b86b8ea60b59d823fe6b6450"
   ],
   "stats": {
-    "total_sent": 124,
+    "total_sent": 125,
     "total_failed": 2
   }
 }
