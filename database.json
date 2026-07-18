@@ -755,6 +755,12 @@
       "mode": "Architecture Breakdown",
       "date": "2026-07-18T14:21:40.099726+00:00",
       "content_hash": "67a167f868473894aa7e11a813524440"
+    },
+    {
+      "title": "العنوان: ازاي تتحكم في مشكلة الـ \"Memory Leaks\" في تطبيقاتك بتاعة الـ \"C++\"؟",
+      "mode": "Memory Management Deep Dive",
+      "date": "2026-07-18T19:11:09.694517+00:00",
+      "content_hash": "1214d97fe261555bdc01f64568eb5f09"
     }
   ],
   "topic_hashes": [
@@ -883,10 +889,11 @@
     "628613d3d9889e36cc1458b34d7f9087",
     "b9224940b11ed3b23b46df6206ee6c5d",
     "f5cabaa0b86b8ea60b59d823fe6b6450",
-    "caab5b188b3db41d367eda2018816f5d"
+    "caab5b188b3db41d367eda2018816f5d",
+    "234a4caa5632e12e02e60e0c08cc1109"
   ],
   "stats": {
-    "total_sent": 126,
+    "total_sent": 127,
     "total_failed": 2
   }
 }
