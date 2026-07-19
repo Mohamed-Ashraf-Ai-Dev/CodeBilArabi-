@@ -761,6 +761,12 @@
       "mode": "Memory Management Deep Dive",
       "date": "2026-07-18T19:11:09.694517+00:00",
       "content_hash": "1214d97fe261555bdc01f64568eb5f09"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Data Corruption\" في أنظمة الـ \"Distributed File Systems\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-19T14:24:57.366261+00:00",
+      "content_hash": "94cd9ea23412dbe9f2397b309823bfe0"
     }
   ],
   "topic_hashes": [
@@ -890,10 +896,11 @@
     "b9224940b11ed3b23b46df6206ee6c5d",
     "f5cabaa0b86b8ea60b59d823fe6b6450",
     "caab5b188b3db41d367eda2018816f5d",
-    "234a4caa5632e12e02e60e0c08cc1109"
+    "234a4caa5632e12e02e60e0c08cc1109",
+    "640dedf4c0440500b2f23309a59d5244"
   ],
   "stats": {
-    "total_sent": 127,
+    "total_sent": 128,
     "total_failed": 2
   }
 }
