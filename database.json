@@ -767,6 +767,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-19T14:24:57.366261+00:00",
       "content_hash": "94cd9ea23412dbe9f2397b309823bfe0"
+    },
+    {
+      "title": "العنوان: ازاي تتحكم في مشكلة الـ \"Connection Pooling\" في نظامك بتاع الـ \"High-Performance Databases\"؟",
+      "mode": "Database War",
+      "date": "2026-07-19T19:12:13.908376+00:00",
+      "content_hash": "8de4e32dbc81e6c1c972dbb0fdb96760"
     }
   ],
   "topic_hashes": [
@@ -897,10 +903,11 @@
     "f5cabaa0b86b8ea60b59d823fe6b6450",
     "caab5b188b3db41d367eda2018816f5d",
     "234a4caa5632e12e02e60e0c08cc1109",
-    "640dedf4c0440500b2f23309a59d5244"
+    "640dedf4c0440500b2f23309a59d5244",
+    "60c13484f41213d5a43c444d55216631"
   ],
   "stats": {
-    "total_sent": 128,
+    "total_sent": 129,
     "total_failed": 2
   }
 }
