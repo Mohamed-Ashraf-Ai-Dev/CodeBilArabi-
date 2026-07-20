@@ -773,6 +773,12 @@
       "mode": "Database War",
       "date": "2026-07-19T19:12:13.908376+00:00",
       "content_hash": "8de4e32dbc81e6c1c972dbb0fdb96760"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Context Switching\" في نظامك بتاع الـ \"Real-Time Operating Systems\"؟",
+      "mode": "Failure Analysis",
+      "date": "2026-07-20T15:13:55.573741+00:00",
+      "content_hash": "13ec2a162ed45ab83f05e1fa2271dba3"
     }
   ],
   "topic_hashes": [
@@ -904,10 +910,11 @@
     "caab5b188b3db41d367eda2018816f5d",
     "234a4caa5632e12e02e60e0c08cc1109",
     "640dedf4c0440500b2f23309a59d5244",
-    "60c13484f41213d5a43c444d55216631"
+    "60c13484f41213d5a43c444d55216631",
+    "646e963026971c7f4a5e613c136ee6c5"
   ],
   "stats": {
-    "total_sent": 129,
+    "total_sent": 130,
     "total_failed": 2
   }
 }
