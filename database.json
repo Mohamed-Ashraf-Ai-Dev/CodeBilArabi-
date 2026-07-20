@@ -779,6 +779,12 @@
       "mode": "Failure Analysis",
       "date": "2026-07-20T15:13:55.573741+00:00",
       "content_hash": "13ec2a162ed45ab83f05e1fa2271dba3"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Memory Alignment\" في نظامك بتاع الـ \"High-Performance Computing\"؟",
+      "mode": "Architecture Breakdown",
+      "date": "2026-07-20T19:48:31.190773+00:00",
+      "content_hash": "530d4eda29ff533051fa610e6f0f9f4d"
     }
   ],
   "topic_hashes": [
@@ -911,10 +917,11 @@
     "234a4caa5632e12e02e60e0c08cc1109",
     "640dedf4c0440500b2f23309a59d5244",
     "60c13484f41213d5a43c444d55216631",
-    "646e963026971c7f4a5e613c136ee6c5"
+    "646e963026971c7f4a5e613c136ee6c5",
+    "65a9d2edd2a35ef75a361fc2f315f34b"
   ],
   "stats": {
-    "total_sent": 130,
+    "total_sent": 131,
     "total_failed": 2
   }
 }
