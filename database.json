@@ -791,6 +791,12 @@
       "mode": "War Story",
       "date": "2026-07-21T15:06:52.841403+00:00",
       "content_hash": "b2994dbf539dab5c846531373738a341"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Livelock\" في أنظمة الـ \"Real-Time Systems\"؟",
+      "mode": "Concurrency Nightmare",
+      "date": "2026-07-21T19:37:29.485764+00:00",
+      "content_hash": "af6936f65e51a3b1ab964d67b6c0419a"
     }
   ],
   "topic_hashes": [
@@ -925,10 +931,11 @@
     "60c13484f41213d5a43c444d55216631",
     "646e963026971c7f4a5e613c136ee6c5",
     "65a9d2edd2a35ef75a361fc2f315f34b",
-    "84a26b9de9d149ea3755aa88e884414f"
+    "84a26b9de9d149ea3755aa88e884414f",
+    "4d8b853930aaa5ea31d5f9baf6ac4d15"
   ],
   "stats": {
-    "total_sent": 132,
+    "total_sent": 133,
     "total_failed": 2
   }
 }
