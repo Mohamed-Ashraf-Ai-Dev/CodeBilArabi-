@@ -797,6 +797,12 @@
       "mode": "Concurrency Nightmare",
       "date": "2026-07-21T19:37:29.485764+00:00",
       "content_hash": "af6936f65e51a3b1ab964d67b6c0419a"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"API Gateway Bottleneck\" في نظامك بتاع الـ \"Microservices Architecture\"؟",
+      "mode": "API Design Sins",
+      "date": "2026-07-22T15:07:56.343003+00:00",
+      "content_hash": "1e711f2c89f664db434237cfe70483f5"
     }
   ],
   "topic_hashes": [
@@ -932,10 +938,11 @@
     "646e963026971c7f4a5e613c136ee6c5",
     "65a9d2edd2a35ef75a361fc2f315f34b",
     "84a26b9de9d149ea3755aa88e884414f",
-    "4d8b853930aaa5ea31d5f9baf6ac4d15"
+    "4d8b853930aaa5ea31d5f9baf6ac4d15",
+    "9ef38a31fb353cc601019f25bf5bec80"
   ],
   "stats": {
-    "total_sent": 133,
+    "total_sent": 134,
     "total_failed": 2
   }
 }
