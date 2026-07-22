@@ -803,6 +803,12 @@
       "mode": "API Design Sins",
       "date": "2026-07-22T15:07:56.343003+00:00",
       "content_hash": "1e711f2c89f664db434237cfe70483f5"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Deadlock\" في نظامك بتاع الـ \"Concurrent Programming\"؟",
+      "mode": "Myth Busting",
+      "date": "2026-07-22T19:27:19.886628+00:00",
+      "content_hash": "e26dd415fdbe8fd56295f98368f3f4b4"
     }
   ],
   "topic_hashes": [
@@ -939,10 +945,11 @@
     "65a9d2edd2a35ef75a361fc2f315f34b",
     "84a26b9de9d149ea3755aa88e884414f",
     "4d8b853930aaa5ea31d5f9baf6ac4d15",
-    "9ef38a31fb353cc601019f25bf5bec80"
+    "9ef38a31fb353cc601019f25bf5bec80",
+    "3f24d04a9ea0cf53f5ac0068e0ea460d"
   ],
   "stats": {
-    "total_sent": 134,
+    "total_sent": 135,
     "total_failed": 2
   }
 }
