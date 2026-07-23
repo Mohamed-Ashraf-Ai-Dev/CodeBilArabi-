@@ -809,6 +809,12 @@
       "mode": "Myth Busting",
       "date": "2026-07-22T19:27:19.886628+00:00",
       "content_hash": "e26dd415fdbe8fd56295f98368f3f4b4"
+    },
+    {
+      "title": "العنوان: ازاي تتعامل مع مشكلة الـ \"Side-Channel Attacks\" في أنظمة الـ \"Cloud Computing\"؟",
+      "mode": "Security Research",
+      "date": "2026-07-23T15:12:32.079388+00:00",
+      "content_hash": "ebe0837f0e71512b6d83dccc4c4cb591"
     }
   ],
   "topic_hashes": [
@@ -946,10 +952,11 @@
     "84a26b9de9d149ea3755aa88e884414f",
     "4d8b853930aaa5ea31d5f9baf6ac4d15",
     "9ef38a31fb353cc601019f25bf5bec80",
-    "3f24d04a9ea0cf53f5ac0068e0ea460d"
+    "3f24d04a9ea0cf53f5ac0068e0ea460d",
+    "73a308b78b25db9d91467e19e0d73b8c"
   ],
   "stats": {
-    "total_sent": 135,
+    "total_sent": 136,
     "total_failed": 2
   }
 }
